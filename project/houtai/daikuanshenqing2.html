@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>贷款申请</title>
+<link rel="stylesheet" type="text/css" href="css/base.css"/>
+<link rel="stylesheet" type="text/css" href="css/admin.css"/>
+</head>
+<body>
+<div class="top-bar">
+	<h2 class="ht-h2">Manage</h2>
+	<div class="user-wrap">
+    	<a class="exit">退出</a>
+    	<a class="user">admin</a>
+    </div>
+</div>
+<div class="left-bar">
+	<img class="ht-logo" src="images/ht-logo.png">
+    <ul class="ht-nav">
+    	<li class="list-on"><a href="daikuanshenqing.html"><i class="ic1"></i>贷款申请</a></li>
+        <li><a href="kehuguanli.html"><i class="ic2"></i>客户管理</a></li>
+        <li><a href="zixunguanli.html"><i class="ic3"></i>资讯管理</a></li>
+        <li><a href="anliguanli.html"><i class="ic4"></i>案例管理</a></li>
+        <li><a href="zhaopinguanli.html"><i class="ic5"></i>招聘管理</a></li>
+        <li><a href="quanxianguanli.html"><i class="ic6"></i>权限管理</a></li>
+        <li><a href="changePassword.html"><i class="ic7"></i>修改密码</a></li>
+    </ul>
+</div>
+<div class="content">
+	<div class="dksq">
+    	<div class="item-1 all-float">
+        	<span>申请类型：</span>
+            <select>
+            	<option>普通贷款</option>
+            </select>
+            <span class="ml10">申请日期：</span>
+            <input type="text" class="mt5"/>
+            <span class="ml20">处理状态：</span>
+            <select>
+            	<option>请选择</option>
+            </select>
+            <a class="btn-1 btn-blue ml30">查询</a>
+            <a href="贷款申请2.html" class="btn-1 btn-purple ml20">上传资料</a>
+        </div>
+        <div class="item-1 mt10">
+        	<span class="fb">上传资料</span>
+        </div>
+        <div class="item-2 mt10">
+        	<div class="items">
+            	<div class="items-left">请选择贷款主体：</div>
+                <div class="items-right"><select><option>公司</option></select></div>
+            </div>
+            <div class="items">
+            	<div class="items-left">请选择贷款行业：</div>
+                <div class="items-right"><select><option>煤矿</option></select></div>
+            </div>
+            <div class="items">
+            	<div class="items-left">是否有担保人：</div>
+                <div class="items-right short"><select><option>是</option></select><input class="ml20" type="text" value="请输入担保人" /></div>
+            </div>
+            <div class="items">
+            	<div class="items-left">请输入贷款月利率：</div>
+                <div class="items-right"><input class=" w250" type="text" /><div class="warning">警告：月利率一旦确认，无法修改</div></div>
+            </div>
+            <div class="items">
+            	<div class="items-left" style="padding-bottom:60px;">请上传调查报告：</div>
+                <div class="items-right"><input type="file"  class="file"/></br><button>上传</button></div>
+            </div>
+            <div class="items">
+            	<div class="items-left">请选择还款方式：</div>
+                <div class="items-right short"><select><option>其他</option></select><input class="ml20" type="text" value="请输入担保人" /></div>
+            </div>
+            <div class="items">
+            	<div class="items-left">请选择申请类型：</div>
+                <div class="items-right"><select><option>其他</option></select></div>
+            </div>
+            <div class="items">
+            	<div class="items-left">请输入最后还款日期：</div>
+                <div class="items-right"><input type="text" class="w250"></div>
+            </div>
+            <div class="items" style="border:none">
+            	<div class="items-left" style="padding-bottom:40px;"></div>
+                <div class="items-right"><a class="btn-1 btn-purple" style="width:154px">确认上传</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

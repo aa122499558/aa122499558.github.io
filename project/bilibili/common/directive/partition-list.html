@@ -1,0 +1,17 @@
+<div class="{{myClass}} loop" id="main" myname="{{myName}}">
+    <div class="label">
+        <div class="title">
+            <h5>热门标签</h5>
+            <span>点击即可查看本区标签相关内容</span>
+        </div>
+        <ul>
+            <li ng-repeat="data in myData.label" class=" {{$first?'active':''}}"><a href="javascript:void">{{data}}</a></li>
+        </ul>
+        <div class="open">
+            <div class="btn">展开</div>
+        </div>
+    </div>
+    <partition my-data="myData.new" my-class="par-list"></partition>
+    <ranking my-data="myData.ranking" my-class="mu_ran"></ranking>
+    <list my-data="myData.mainList.data"></list>
+</div>

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>权限管理</title>
+<link rel="stylesheet" type="text/css" href="css/base.css"/>
+<link rel="stylesheet" type="text/css" href="css/admin.css"/>
+<script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<div class="top-bar">
+	<h2 class="ht-h2">Manage</h2>
+	<div class="user-wrap">
+    	<a class="exit">退出</a>
+    	<a class="user">admin</a>
+    </div>
+</div>
+<div class="left-bar">
+	<img class="ht-logo" src="images/ht-logo.png">
+    <ul class="ht-nav">
+    	<li><a href="daikuanshenqing.html"><i class="ic1"></i>贷款申请</a></li>
+        <li><a href="kehuguanli.html"><i class="ic2"></i>客户管理</a></li>
+        <li><a href="zixunguanli.html"><i class="ic3"></i>资讯管理</a></li>
+        <li><a href="anliguanli.html"><i class="ic4"></i>案例管理</a></li>
+        <li><a href="zhaopinguanli.html"><i class="ic5"></i>招聘管理</a></li>
+        <li class="list-on"><a href="quanxianguanli.html"><i class="ic6"></i>权限管理</a></li>
+        <li><a href="changePassword.html"><i class="ic7"></i>修改密码</a></li>
+    </ul>
+</div>
+<div class="content">
+	<div class="qxgl">
+        <div class="item-3 mt10">
+        	<div class="item3-items">
+           		<div class="items" style="margin-left:-60px">
+                	<span>姓名：</span><input type="text"  />
+                </div>
+            	<div class="items">
+                	<span>帐号类型：</span><select><option>请选择</option></select>
+                </div>
+               <div class="items" style="width:auto;border:none">
+                	<a class="btn-1 btn-blue ml10" style="width:120px">查询</a>
+                </div>
+            </div>
+        </div>
+        <div class="item-2 item-2-icon mt10">
+        	<a href="quanxianguanli2.html"><i></i>新增帐号</a>
+        </div>
+        <div class="item-1 mt10 blue-a" style="padding:4px;">
+        	<table cellspacing="2">
+            	<tr>
+                	<th style="width:5%;"><a id="sel-all">序号</a></th>
+                    <th  style="width:15%;">姓名</th>
+                    <th  style="width:25%;">帐号类型</th>
+                    <th  style="width:54%;">操作</th>
+                </tr>
+                <tr>
+                	<td style="width:5%;">1</td>
+                    <td style="width:15%;">2014-07-44</td>
+                    <td style="width:25%;">个人</td>
+                    <td style="width:54%;"><div class="cz1"><a>修改权限</a><a>修改个人资料</a><a>初始化密码</a><a>启用</a></div></td>
+
+                </tr>
+                <tr>
+                	<td style="width:5%;">2</td>
+                    <td style="width:15%;">2014-07-44</td>
+                    <td style="width:25%;">个人</td>
+                    <td style="width:54%;"><div class="cz1"><a>修改权限</a><a>修改个人资料</a><a>初始化密码</a><a>启用</a></div></td>
+                </tr>
+            </table>
+        </div>
+        <div class="item-1 page mt10">
+        	<span class="ml10">1</span>
+            <span class="ml10">2</span>
+            <span class="ml10">></span>
+            <span class="ml10">第</span><input type="text" class="ml10" style="width:50px;margin-top:5px" /><span class="ml10">页</span>
+            <a class="ml10 btn-page">确定</a>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+	$("tr:odd").css("background","#f1f1f1");
+	$("tr:even").css("background","#d2f0f3");
+</script>
+</html>
