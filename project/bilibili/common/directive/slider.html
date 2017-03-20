@@ -1,0 +1,20 @@
+<div class="slider {{myClass}}">
+    <ul>
+        <li style="color:#fff;" ng-repeat=" data in myData" class="no">
+            <a href="javascript:void">
+                <img ng-src="{{data.pic}}"/>
+                <p>{{data.title}}<span>{{last}}</span></p>
+            </a>
+        </li>
+    </ul>
+    <ol>
+        <li ng-repeat="data in myData" class="{{ $first ? 'active' : '' }}"></li>
+    </ol>
+    <ol>
+        <li ng-repeat="data in myData" class="{{ $first ? 'active' : '' }}" repeat-finish="renderFinish()">
+            <img ng-src="{{data.s_pic}}"/>
+        </li>
+    </ol>
+    <div class="t {{ $first ?'ac':''}}" ng-repeat="d in myData " >{{d.title}}</div>
+    <div class="mask"></div>
+</div>

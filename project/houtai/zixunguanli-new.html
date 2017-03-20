@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>资讯管理=新增</title>
+<link rel="stylesheet" type="text/css" href="css/base.css"/>
+<link rel="stylesheet" type="text/css" href="css/admin.css"/>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="ueditor/ueditor.config.js"></script>
+<script src="ueditor/ueditor.all.min.js"></script>
+</head>
+<body>
+<div class="top-bar">
+	<h2 class="ht-h2">Manage</h2>
+	<div class="user-wrap">
+    	<a class="exit">退出</a>
+    	<a class="user">admin</a>
+    </div>
+</div>
+<div class="left-bar">
+	<img class="ht-logo" src="images/ht-logo.png">
+    <ul class="ht-nav">
+        <li><a href="daikuanshenqing.html"><i class="ic1"></i>贷款申请</a></li>
+        <li><a href="kehuguanli.html"><i class="ic2"></i>客户管理</a></li>
+        <li class="list-on"><a href="zixunguanli.html"><i class="ic3"></i>资讯管理</a></li>
+        <li><a href="anliguanli.html"><i class="ic4"></i>案例管理</a></li>
+        <li><a href="zhaopinguanli.html"><i class="ic5"></i>招聘管理</a></li>
+        <li><a href="quanxianguanli.html"><i class="ic6"></i>权限管理</a></li>
+        <li><a href="changePassword.html"><i class="ic7"></i>修改密码</a></li>
+    </ul>
+</div>
+<div class="content">
+	<div class="dksq">
+        <div class="item-2 item-2-icon mt10">
+                <a class="ml10"><i class="back"></i>返回</a>
+                <a><i></i>新增资讯</a>
+            </div>
+        
+        <div class="item-2 mt10">
+            <div class="items">
+            	<div class="items-left">标题：</div>
+                <div class="items-right"><input type="text" style="width:700px" /></div>
+            </div>
+            <div class="items">
+            	<div class="items-left">资讯类别：</div>
+                <div class="items-right"><select><option>全部资讯</option></select></div>
+            </div>
+            <div class="items">
+            	<div class="items-left">资讯来源：</div>
+                <div class="items-right"><input type="text" /></div>
+            </div>
+            <div class="items">
+            	<div class="items-left" style="padding-bottom:280px">资讯正文：</div>
+                <div class="items-right"><script id="editor" type="text/plain" style="width:750px;height:200px;padding-bottom:15px"></script></div>
+            </div>
+            <div class="items" style="border:none">
+            	<div class="items-left" style="padding-bottom:40px;"></div>
+                <div class="items-right"><a class="btn-1 btn-black" style="width:154px">预览</a><a class="btn-1 btn-black ml10" style="width:154px">提交</a><a class="btn-1 btn-black ml10" style="width:154px">取消</a></div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+
+    //实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    var ue = UE.getEditor('editor');
+
+
+    function isFocus(e){
+        alert(UE.getEditor('editor').isFocus());
+        UE.dom.domUtils.preventDefault(e)
+    }
+    function setblur(e){
+        UE.getEditor('editor').blur();
+        UE.dom.domUtils.preventDefault(e)
+    }
+    function insertHtml() {
+        var value = prompt('插入html代码', '');
+        UE.getEditor('editor').execCommand('insertHtml', value)
+    }
+    function createEditor() {
+        enableBtn();
+        UE.getEditor('editor');
+    }
+    function getAllHtml() {
+        alert(UE.getEditor('editor').getAllHtml())
+    }
+    function getContent() {
+        var arr = [];
+        arr.push("使用editor.getContent()方法可以获得编辑器的内容");
+        arr.push("内容为：");
+        arr.push(UE.getEditor('editor').getContent());
+        alert(arr.join("\n"));
+    }
+    function getPlainTxt() {
+        var arr = [];
+        arr.push("使用editor.getPlainTxt()方法可以获得编辑器的带格式的纯文本内容");
+        arr.push("内容为：");
+        arr.push(UE.getEditor('editor').getPlainTxt());
+        alert(arr.join('\n'))
+    }
+    function setContent(isAppendTo) {
+        var arr = [];
+        arr.push("使用editor.setContent('欢迎使用ueditor')方法可以设置编辑器的内容");
+        UE.getEditor('editor').setContent('欢迎使用ueditor', isAppendTo);
+        alert(arr.join("\n"));
+    }
+    function setDisabled() {
+        UE.getEditor('editor').setDisabled('fullscreen');
+        disableBtn("enable");
+    }
+
+    function setEnabled() {
+        UE.getEditor('editor').setEnabled();
+        enableBtn();
+    }
+
+    function getText() {
+        //当你点击按钮时编辑区域已经失去了焦点，如果直接用getText将不会得到内容，所以要在选回来，然后取得内容
+        var range = UE.getEditor('editor').selection.getRange();
+        range.select();
+        var txt = UE.getEditor('editor').selection.getText();
+        alert(txt)
+    }
+
+    function getContentTxt() {
+        var arr = [];
+        arr.push("使用editor.getContentTxt()方法可以获得编辑器的纯文本内容");
+        arr.push("编辑器的纯文本内容为：");
+        arr.push(UE.getEditor('editor').getContentTxt());
+        alert(arr.join("\n"));
+    }
+    function hasContent() {
+        var arr = [];
+        arr.push("使用editor.hasContents()方法判断编辑器里是否有内容");
+        arr.push("判断结果为：");
+        arr.push(UE.getEditor('editor').hasContents());
+        alert(arr.join("\n"));
+    }
+    function setFocus() {
+        UE.getEditor('editor').focus();
+    }
+    function deleteEditor() {
+        disableBtn();
+        UE.getEditor('editor').destroy();
+    }
+    function disableBtn(str) {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            if (btn.id == str) {
+                UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+            } else {
+                btn.setAttribute("disabled", "true");
+            }
+        }
+    }
+    function enableBtn() {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+        }
+    }
+</script>
+</html>

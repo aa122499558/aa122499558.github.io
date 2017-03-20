@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>login</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/global.css"/>
+<link rel="stylesheet" type="text/css" href="css/account-setting.css"/>
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script>
+    function tipShow(){
+        $(".login-error").show();
+    }
+
+    function tipHide(){
+        $(".login-error").hide();
+    } 
+
+    function hideVerifyCode() {
+        $("#messagecode").hide();
+    }
+    function checkVerifyCode() {
+        var tip = $("#tip");
+        var vCode = document.getElementById("verifycode");
+        if (vCode == null || vCode.value.length < 4) {
+            tip.html("请输入验证码");
+            tipShow();
+            return false;
+        } else {
+            tipHide();
+        }
+        return true;
+    }
+
+    function chekNkNamefor() {
+        var tip = $("#tip");
+        var nkName = document.getElementById("userName").value;
+        if (nkName == "" || nkName == null) {
+            tip.html("请输入用户名");
+            tipShow();
+            return false;
+        } else{
+            tipHide();
+            return true;
+        }
+    }
+
+    function chekPwdfor_login() {
+        var tip = $("#tip");
+        var pwd = document.getElementById("password");
+        if (pwd == null || pwd.value == "") {
+            tip.html("请输入密码");
+            tipShow();
+            return false;
+        } else if (pwd.value.length < 6) {
+            tip.html("密码过短");
+            tipShow();
+            return false;
+        } else {
+            tipHide();
+        }
+        return true;
+    }
+	
+    // 定义回车事件,响应注册按钮操作
+    if (document.addEventListener) { // 如果是Firefox
+        document.addEventListener("keypress", fireFoxHandler, true);
+    } else {
+        document.attachEvent("onkeypress", ieHandler);
+    }
+
+    function fireFoxHandler(evt) { // 如果是Firefox
+        if (evt.keyCode == 13) {
+            loginSubmit()
+        }
+    }
+
+    function ieHandler(evt) {
+        if (evt.keyCode == 13) {
+            loginSubmit()
+        }
+    }
+</script>
+</head>
+
+<body>
+<div id="header">
+    <div class="inner">
+        <ul class="service">
+            <li class="hotline"><i class="icons"></i><b>客服热线</b><em>400 890 3980</em></li>
+            <li class="concerns"><b>关注我们</b><a href="javascript:;" target="_blank" class="icons weixin"></a></li>
+        </ul>
+        <div class="loginbar">
+                     <div class="fl"><a href="" style="color:#fc8936" rel="nofollow">免费注册</a><a href="" style="color:#349cd8">立即登录</a></div>
+        </div>
+        <div class="logo">
+            <h2><a href="/"><img alt="网" src="images/logo.png" width="350" height="51"></a></h2>
+            <h1>口号</h1>
+        </div>
+    </div>
+    <div class="topbar"></div>
+</div>
+<div id="wrap">
+	<div class="login-entry">
+    	<div class="head">
+            <h2>账户登录</h2>
+            <b class="line"></b>
+        </div>
+        <div class="login-error" style="font-size:12px;"><table><tbody><tr><td id="tip"></td></tr></tbody></table></div>
+    <ul class="login-items">
+            <li>
+                <label>用户名</label>
+                <input type="text" id="userName" name="userName" class="input" onblur="chekNkNamefor();" maxlength="32">
+                <div class="error" id="messageUserName"></div>
+            </li>
+            <li>
+                <label>密码</label>
+                <input type="password" name="password" id="password" class="input" onblur="chekPwdfor_login();" maxlength="16">
+                <div class="error" id="messagePwd"></div>
+            </li>
+            <li style="display:none;" id="verifycodeLi">
+                <label>验证码</label>
+                <input type="text" id="verifycode" name="verifycode" class="input" maxlength="4" style="width:70px" onblur="checkVerifyCode()" onfocus="hideVerifyCode()">
+                <img id="imgverCode" src="/secure/verifyCode.jsp" onclick="coderefresh()" width="104" height="42" alt="验证码" title="验证码" class="authcode"> 
+				<a href="javascript:void(0)" onclick="coderefresh()" class="refcode r3">
+				<i class="icons refresh-todo"></i><b>刷新</b></a> 
+                
+            </li>
+        </ul>
+        <div class="login-check">
+            <input type="checkbox" id="checkWeekly">
+            <label for="checkWeekly">记住我<a href="javascript:;" class="icons yhelp ToolTips ToolTipCol">帮助</a></label>
+            <a href="/secure/resetPassword.action">忘记登录密码？</a>
+        </div>
+        <div class="login-button">
+            <input name="登录" type="button" value="登录" onclick="loginSubmit();">
+        </div>
+        <div class="login-server"> <a href="" class="weibo" style="color:#8a949c"><i class="icons"></i>微博登录</a><a href="/secure/register/" class="reg">免费注册</a> </div>
+        <div class="security-pro"><i class="icons ver-green-down"></i><b>您的信息已通过256位SGC加密保护，数据传输安全</b></div>
+    </div>
+    <div class="adSwitch">
+        <div class="switch-wrap"><a href="" class="icons prev">prev</a><a href="" class="icons next">next</a><div class="switch-container" style="position: relative; width: 300px; overflow: hidden;"><ul class="items" id="adSwitch" style="width: 999999px; position: relative; left: -300px;"><li style="float: left; list-style: none; margin-right: 0px;">
+                <div class="img"><img src="images/img.png" width="110" height="110"></div>
+                <h2>最安全的网上理财</h2>
+                <p>5道审核、FICO评分、机构全额担保</p>
+                <p><a href="">了解更多&gt;</a></p>
+            </li><li style="float: left; list-style: none; margin-right: 0px;">
+                <div class="img"><img src="images/img2.png" width="110" height="110"></div>
+                <h2>随时随地赎回投资</h2>
+                <p>突然急用钱想收回投资？2步搞定，最快当天到账</p>
+                <p><a href="">了解更多&gt;</a></p>
+            </li><li style="float: left; list-style: none; margin-right: 0px;">
+                <div class="img"><img src="images/img3.png" width="110" height="110"></div>
+                <h2>高收益也可以低门槛</h2>
+                <p>30倍银行存款利息，50元起步, 0手续费</p>
+                <p><a href="">了解更多&gt;</a></p>
+            </li></ul></div></div>
+    </div>
+</div>
+<div id="footer" style="height:140px;">
+    <div class="inner footer2">
+        <div class="fool">
+            <ul class="navsub">
+                <li><a href="">关于我们</a></li>
+                <li><a href="">帮助中心</a></li>
+                <li><a href="">新闻中心</a></li>
+                <li><a href="">保障说明</a></li>
+                <li><a href="">联系我们</a></li>
+                <li><a href="">友情链接</a></li>
+            </ul>
+            <div class="cabout">
+                <h2>关注我们</h2>
+                <ul>
+                    <li><a href="" target="_blank" class="weibo hovereffect" rel="nofollow"><i class="icons">官方新浪微博</i></a></li>
+                    <li><a href="javascript:;" class="weixin hovereffect" rel="nofollow"><i class="icons">官方微信</i></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="foor">
+        	<div class="hotl">
+                <p>客服热线：<em>400 890 3980</em></p>
+            </div>
+            <div class="letter foot-letter">
+            	<a title="网信认证" href="" target="_blank" class="icons yx" rel="nofollow"></a>
+                <a title="VeriSign加密服务" href="" target="_blank" class="icons yn" rel="nofollow"></a>
+                <a title="可信网站" href="" target="_blank" class="icons yk" rel="nofollow"></a>
+                <a title="诚信网站" href="" target="_blank" class="icons yc" rel="nofollow"></a>
+                <a title="网上交易保障中心" href="" target="_blank" class="icons yb" rel="nofollow"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/carousel.js" type="text/javascript"></script>
+<script src="js/account.set.js" type="text/javascript"></script>
+</body>
+</html>

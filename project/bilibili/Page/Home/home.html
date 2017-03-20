@@ -1,0 +1,36 @@
+
+
+<div id="main" class="loop hom">
+    <div class="con w-980">
+        <slider my-data="home.data.slider" my-class="small" repeat-finish="renderFinish()"></slider>
+        <hot my-data="home.data.hot"></hot>
+    </div>
+    <ul class="main-list">
+        <li class="first-list">
+            <partition my-data="home.data.recommend" my-class="recommend"></partition>
+            <div class="online">
+                <div class="info">
+                    在线人数:307486<span></span>最新投稿:1707
+                </div>
+                <img src="http://i2.hdslb.com/promote/d77bbd3ffdefdd11064b9465f96290d8.jpg"/>
+            </div>
+        </li>
+        <li class="live floor" floor="one">
+            <partition my-data="home.data.live" my-class="musicList home-s"></partition>
+            <ranking my-data="home.data.liveRanking"></ranking>
+        </li>
+        <li floor="two" class="floor">
+            <partition my-data="home.data.musicList" my-class="musicList home-s"></partition>
+            <ranking my-data="home.data.musicRanking"></ranking>
+        </li>
+        <li floor="three" class="floor">
+            <new-animate my-data="public.data.newAnimate.day"></new-animate>
+            <animate-r my-data="home.data.animateSlider" two="home.data.animateRecommend"></animate-r>
+        </li>
+        <li floor="four" class="floor">
+            <partition my-data="home.data.animateList" my-class="animateList home-s"></partition>
+            <ranking my-data="home.data.animateRanking"></ranking>
+        </li>
+
+    </ul>
+</div>

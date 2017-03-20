@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* CSS Document */
+
+#mainsub{
+	width:950px;
+	_width:940px;
+	_overflow:hidden;
+	_height:auto;
+	padding-bottom:20px;
+}
+.g_box{
+	width:920px;
+	position:relative;	
+}
+.g_box li{
+	height:60px;
+	border-bottom:1px solid #e7ecee;
+	position:relative;	
+}
+.t_icons, .static_nav li i, .mech li i{
+	top:14px;
+	left:55px; 
+	background: url(../images/sx.png) no-repeat;
+	overflow:hidden;
+	font-size:0;
+	line-height:0;
+	text-indent:-9999px;
+	display:inline-block; 
+	position:absolute; 
+	width:10px; 
+	height:10px
+}
+.static_nav li li i.ico, .g_box .ico{
+	top:14px; 
+	left:40px; 
+	width:4px; 
+	height:4px;
+	background-position:0 -32px
+}
+.g_box .ico{
+	float:left;
+	top:28px;
+	left:5px;	
+}
+.g_box li a{
+	width:420px; 
+	float:left; 
+	line-height:60px; 
+	overflow:hidden; 
+	white-space:nowrap; 
+	text-overflow:ellipsis; 
+	cursor:pointer; 
+	display:block; 
+	margin-left:20px;
+	color:#626B72;
+}
+.g_box li a:hover{ 
+	text-decoration:underline; 
+	color:#349cd8
+}
+.g_box li span{ 
+	width:120px; 
+	position:absolute;
+	top:20px; 
+	right:0;
+	padding-right:15px; 
+	color:#a1acb4; 
+	overflow:hidden; 
+	z-index:99; 
+	background:#fff; 
+	text-align:right
+}
+.post-title, .notice_pd{
+	margin-bottom:20px;
+	text-align:center;
+	position:relative;
+	border-bottom:1px solid #e7ecee	
+}
+.notice_pd{
+	padding:20px 50px;	
+}
+.post-title h1, .notice_pd h1{
+	font-size:16px;
+	font-weight:bold;
+	margin-bottom:5px;	
+}
+.post-title h2, .notice_pd h2{
+	font-weight:bold;	
+}
+.notice_con, .media_text{
+	padding:0 10px;
+	padding-bottom:15px;	
+}
+
+/*media*/
+.media-list{
+	position:relative;
+	overflow:hidden;
+	zoom:1;
+	margin:20px 30px 0;
+	padding-bottom:20px;
+	line-height:1.7em;
+	border-bottom:1px solid #e7ecee;	
+}
+.media-list h2{
+	font-size:16px;	
+	font-weight:bold;
+}
+.media-list a, .media-list a:visited{
+	color:#349cd8;
+	display:block;	
+}
+.media-list h2 a, .media-list h2 a:visited{
+	color:#335c7d;	
+}
+.media-list .time{
+	color:#a1acb4;	
+}
+.media-list .cont-entry{
+	padding-right:190px;
+	height:auto;
+	max-height:220px;
+	overflow:hidden;	
+}
+.media-list .img{
+	position:absolute;
+	right:0;
+	top:30px;	
+}

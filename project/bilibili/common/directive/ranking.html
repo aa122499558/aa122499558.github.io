@@ -1,0 +1,19 @@
+<div class="ranking">
+    <div class="title">
+        <h3>排行</h3>
+    </div>
+    <ul class="{{myClass}}">
+        <li ng-repeat="data in myData" class="{{ $first ? 'first one' : '' }}">
+            <a href="javascript:void">
+                <i class="{{ $index<3? 'active':''}}">{{$index+1}}</i>
+                <img ng-src="{{data.pic}}"/>
+                <h4>{{data.title}}</h4>
+                <b>{{data.play}}</b>
+                <span>综合评分:{{data.dm}}</span>
+                <div class="briefing">{{data.con}}</div>
+            </a>
+        </li>
+
+    </ul>
+    <a href="javascript:void" class="more">查看更多></a>
+</div>
