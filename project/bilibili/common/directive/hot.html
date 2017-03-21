@@ -1,0 +1,26 @@
+<div class="list-w {{myClass}}">
+    <ul class="hot-list">
+        <li ng-repeat=" data in myData " class="mask">
+            <a href="javascript:void">
+                <img ng-src="{{data.pic}}"/>
+                <p class="title"><span ng-cloak>{{data.title}}</span></p>
+                <div class="ani_info">
+                    <h5>{{data.title}}</h5>
+                    <div>{{data.con}}</div>
+                </div>
+                <div class="class">{{data.class}}</div>
+                <div class="info">
+                    <p ng-cloak>{{data.title}}</p>
+                    <dl>
+                        <dt>up主:</dt>
+                        <dd>{{data.up}}</dd>
+                    </dl>
+                    <dl>
+                        <dt>播放:</dt>
+                        <dd>{{data.hits}}</dd>
+                    </dl>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>

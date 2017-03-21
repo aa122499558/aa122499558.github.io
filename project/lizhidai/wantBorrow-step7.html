@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>wantBorrow-step7</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/global.css"/>
+<link rel="stylesheet" type="text/css" href="css/account.css"/>
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="header">
+    <div class="inner">
+        <ul class="service">
+            <li class="hotline"><i class="icons"></i><b>客服热线</b><em>400 890 3980</em></li>
+            <li class="concerns"><b>关注我们</b><a href="javascript:;" target="_blank" class="icons weixin"></a></li>
+        </ul>
+        <div class="loginbar">
+                     <div class="fl"><a href="register.html" style="color:#fc8936" rel="nofollow">免费注册</a><a href="login.html" style="color:#349cd8">立即登录</a></div>
+        </div>
+        <div class="logo">
+            <h2><a href="/"><img alt="网" src="images/logo.png" width="350" height="51"></a></h2>
+            <h1>口号</h1>
+        </div>
+        <div class="nav-wrapper">
+            <ul class="nav">
+                <li><a href="">首页</a></li>
+                <li><a href="">安全保障</a></li>
+                <li><a href="" target="_blank">帮助中心</a></li>
+            </ul>
+            <div class="use">
+            <a href="">我要投资</a>
+            <a href="" rel="nofollow">我要借款</a>
+            </div>
+        </div>
+    </div>
+    <div class="topbar"></div>
+    
+</div>
+<div id="wrapper">
+	<div id="sidebar">
+    	<div class="sidebar-item account-status">
+            <h2>Hi，噶愣兽</h2>
+            <div class="auth-opts">
+                <ul>               
+                    <li id="real_name" class="icons button-un-name" data-text="您尚未进行实名认证&lt;br&gt;&lt;a href='/secure/realNameAuthen.session.action'&gt;马上认证&lt;/a&gt;">用户验证</li>                 
+                    <li id="mobile" class="icons button-un-tels" data-text="您尚未绑定手机&lt;br&gt;&lt;a href='/secure/bindMobile.session.action'&gt;马上绑定&lt;/a&gt;">手机验证</li>            
+                    <li class="icons button-un-pwds" data-text="您尚未将支付密码与登录密码修改为不一致&lt;br&gt;&lt;a href='/secure/modifyPayPwd.session.action'&gt;马上修改&lt;/a&gt;">密码验证</li>
+                </ul>
+            </div>
+            <div class="auth-rate">
+                <div></div>
+            </div>
+            <div class="auth-level">安全等级:<em>
+            低
+            </em><a href="/secure/securityCenter.session.action" target="_blank">[提升]</a></div>
+        </div>
+        <div class="sidebar-item balances">
+            <h2>可用余额</h2>
+            <h3>￥0.00</h3>
+            <div class="recharge">
+            	<a href="" class="gbtn button-recharge"><i class="icons button-rmb"></i>充值</a>
+                <a href="" class="gbtn button-recharge dj">冻结保证金</a>
+            </div>
+        </div>
+        <dl class="apply-menu">
+            <dt>我的账户</dt>
+            <dd class="current">
+                <a href=""><i class="nav-ico nav-account"></i>账户总览</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-warn"></i>消息提醒</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-cash"></i>充值提现</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-card"></i>银行卡</a>
+            </dd> 
+            <dd>
+                <a href=""><i class="nav-ico nav-bag"></i>安全中心</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-chart"></i>资金统计</a>
+            </dd>
+        </dl>
+        <dl class="apply-menu">
+            <dt>我是投资者</dt>
+            <dd>
+                <a href=""><i class="nav-ico nav-chart"></i>我要投资</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-invest"></i>投资记录</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-redeem"></i>回款计划</a>
+            </dd>
+        </dl>
+        <dl class="apply-menu">
+            <dt>我是借入者</dt>
+            <dd>
+                <a href=""><i class="nav-ico nav-deal"></i>我要借款</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-borrowed"></i>借入记录</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-redeem"></i>还款安排</a>
+            </dd>
+        </dl>
+    </div>
+    <div id="main">
+        <div class="title-items">
+            <h2>我要借款</h2>
+        	<b class="line"></b>
+        </div>
+        <div class="record-title borrowingRecord">
+            <h2>通过提交您的详细个人资料，利至贷将进行初步审核</h2>
+        </div>
+        <div class="model-box border-none">
+        	<div class="borrow-step">
+            	<ol class="reg-step-1">
+                	<li class="step-1">
+                        <a>个人资料</a>
+                    </li>
+                    <li class="step-1">
+                        <a>联系方式</a>
+                    </li>
+                    <li class="step-3">
+                        <a>单位资料</a>
+                    </li>
+                    <li class="step-4">
+                        <a>财务状况</a>
+                    </li>
+                    <li class="step-5">
+                        <a>联保情况</a>
+                    </li>
+                    <li class="step-6">
+                        <a>商业图片</a>
+                    </li>
+                    <li class="step-7 current">
+                        <a>资料上传</a>
+                    </li>
+                    <li class="step-8">
+                        <a>审核记录</a>
+                    </li>
+                </ol>
+            </div>
+            <div class="per-infor">
+            	<div class="per-infor-items per-infor-items2">
+                    <div class="upload-pic-wrap">
+                    	<span class="fl">上传文件：</span><input type="file"/><a>上传</a>
+                    </div>
+                    <p>
+                    	请上传【doc,docx,txt,xlsx,xls】格式的文件
+                    </p>
+                    <div class="information upload-file">
+                        <table border="1">
+                            <tr>
+                                <th>序号</th>
+                                <th>文件名</th>
+                                <th>文件说明</th>
+                                <th>修改时间</th>
+                                <th>类型</th>	
+                                <th>操作</th>
+                            </tr>
+                            <tr>
+                                <td class="td1"></td>
+                                <td class="td2"></td>
+                                <td class="td3"></td>
+                                <td class="td3"></td>
+                                <td class="td5"></td>
+                                <td class="td1"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="footer">
+    <div class="inner">
+        <div class="fool">
+            <ul class="navsub">
+                <li><a href="">关于我们</a></li>
+                <li><a href="">帮助中心</a></li>
+                <li><a href="">新闻中心</a></li>
+                <li><a href="">保障说明</a></li>
+                <li><a href="">联系我们</a></li>
+                <li><a href="">友情链接</a></li>
+            </ul>
+            <div class="cabout">
+                <h2>关注我们</h2>
+                <ul>
+                    <li><a href="" target="_blank" class="weibo hovereffect" rel="nofollow"><i class="icons">官方新浪微博</i></a></li>
+                    <li><a href="javascript:;" class="weixin hovereffect" rel="nofollow"><i class="icons">官方微信</i></a></li>
+                    
+                </ul>
+            </div>
+            <div class="letter">
+            	<a title="网信认证" href="" target="_blank" class="icons yx" rel="nofollow"></a>
+                <a title="VeriSign加密服务" href="" target="_blank" class="icons yn" rel="nofollow"></a>
+                <a title="可信网站" href="" target="_blank" class="icons yk" rel="nofollow"></a>
+                <a title="诚信网站" href="" target="_blank" class="icons yc" rel="nofollow"></a>
+                <a title="网上交易保障中心" href="" target="_blank" class="icons yb" rel="nofollow"></a>
+            </div>
+            <div class="rights">有利网--上利至，有利至 Copyright 2013 Yooli.com, All Rights Reserved				            </div>
+        </div>
+        <div class="foor">
+            <div class="hotl">
+                <p>客服热线</p>
+                <p><em>400 890 3980</em></p>
+                <p>客服邮箱 kefu@yooli.com 
+                    <a rel="nofollow" id="onlineService" class="online" href="javascript:void(0)">在线客服<i class="icons"></i></a>
+                </p>
+            </div>
+            <div class="fico">
+            	<a href="javascript:void(0)" class="icons">FICO</a>利至贷使用与世界最大信用评分机构美国FICO(费埃哲)<p>联合开发的<span class="tm">信用评分卡</span> 及<span class="tm">决策引擎</span></p></div>
+            <div class="read">版权所有 京ICP备13047550号-1</div>
+        </div>
+    </div>
+    <div class="t"></div>
+    <div class="b"></div>
+</div>
+<script src="js/carousel.js" type="text/javascript"></script>
+<script src="js/account.set.js" type="text/javascript"></script>
+</body>
+</html>

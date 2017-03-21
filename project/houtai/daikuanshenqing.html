@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>贷款申请</title>
+<link rel="stylesheet" type="text/css" href="css/base.css"/>
+<link rel="stylesheet" type="text/css" href="css/admin.css"/>
+<link rel="stylesheet" type="text/css" href="js/jquery.calendar/css/jquery.cxcalendar.css"/>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.calendar/js/jquery.cxcalendar.min.js"></script>
+</head>
+<body>
+<div class="top-bar">
+	<h2 class="ht-h2">Manage</h2>
+	<div class="user-wrap">
+    	<a class="exit">退出</a>
+    	<a class="user">admin</a>
+    </div>
+</div>
+<div class="left-bar">
+	<img class="ht-logo" src="images/ht-logo.png">
+    <ul class="ht-nav">
+    	<li class="list-on"><a href="daikuanshenqing.html"><i class="ic1"></i>贷款申请</a></li>
+        <li><a href="kehuguanli.html"><i class="ic2"></i>客户管理</a></li>
+        <li><a href="zixunguanli.html"><i class="ic3"></i>资讯管理</a></li>
+        <li><a href="anliguanli.html"><i class="ic4"></i>案例管理</a></li>
+        <li><a href="zhaopinguanli.html"><i class="ic5"></i>招聘管理</a></li>
+        <li><a href="quanxianguanli.html"><i class="ic6"></i>权限管理</a></li>
+        <li><a href="changePassword.html"><i class="ic7"></i>修改密码</a></li>
+    </ul>
+</div>
+<div class="content">
+	<div class="dksq">
+    	<div class="item-1 all-float">
+        	<span>申请类型：</span>
+            <select>
+            	<option>普通贷款</option>
+            </select>
+            <span class="ml10">申请日期：</span>
+            <input id="date_a" type="text" class="mt5 input_cxcalendar" style="width:110px;height:25px;"/>
+            <span class="ml20">处理状态：</span>
+            <select>
+            	<option>请选择</option>
+            </select>
+            <a class="btn-1 btn-blue ml30">查询</a>
+            <a href="daikuanshenqing2.html" class="btn-1 btn-purple ml20">上传资料</a>
+        </div>
+        <div class="item-1 mt10" style="padding:4px;">
+        	<table cellspacing="2">
+            	<tr>
+                	<th class="w40">序号</th>
+                    <th class="w100">申请日期</th>
+                    <th class="w70">类型</th>
+                    <th class="w190">公司名</th>
+                    <th class="w70">申请人</th>
+                    <th class="w100">手机号码</th>
+                    <th class="w70 double-line">申请金额<BR />(万元)</th>
+                    <th class="w100 double-line">审批通过金额<br />(万元)</th>
+                    <th class="w70 double-line">利息<br />(月)</th>
+                    <th class="w100 double-line">管理费<br />(月)</th>
+                    <th class="w100">还款方式</th>
+                    <th class="w100">贷款周期</th>
+                    <th class="w100">担保</th>
+                    <th class="w100">主营行业</th>
+                    <th  class="w100">所在地区</th>
+                    <th class=" w100">经营规模<br />/月收入</th>
+                    <th class="w100">状态</th>
+                    <th class="w100">操作</th>
+                </tr>
+                <tr>
+                	<td>1</td>
+                    <td>2014-07-44</td>
+                    <td>个人</td>
+                    <td>深圳市噶愣兽悠闲公司</td>
+                    <td>爱新觉罗</td>
+                    <td>13715161414</td>
+                    <td>10000</td>
+                    <td>100</td>
+                    <td>12%</td>
+                    <td>0</td>
+                    <td>按月还息，到期还本</td>
+                    <td>150天</td>
+                    <td>是</td>
+                    <td>红木家具</td>
+                    <td>广东省</td>
+                    <td>500（万元）</td>
+                    <td>审批通过</td>
+                    <td ><div class="cz4"><a>分配客户</a><a>无效申请</a></div></td>
+                </tr>
+                <tr>
+                	<td>1</td>
+                    <td>2014-07-44</td>
+                    <td>个人</td>
+                    <td>深圳市噶愣兽悠闲公司</td>
+                    <td>爱新觉罗</td>
+                    <td>13715161414</td>
+                    <td>10000</td>
+                    <td>100</td>
+                    <td>12%</td>
+                    <td>0</td>
+                    <td>按月还息，到期还本</td>
+                    <td>150天</td>
+                    <td>是</td>
+                    <td>红木家具</td>
+                    <td>广东省</td>
+                    <td>500（万元）</td>
+                    <td>审批通过</td>
+                    <td ><div class="cz4"><a>分配客户</a><a>无效申请</a></div></td>
+                </tr>
+            </table>
+        </div>
+        <div class="item-1 page mt10">
+        	<span class="ml10">1</span>
+            <span class="ml10">2</span>
+            <span class="ml10">></span>
+            <span class="ml10">第</span><input type="text" class="ml10" style="width:50px;margin-top:5px" /><span class="ml10">页</span>
+            <a class="ml10 btn-page">确定</a>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+	$("tr:odd").css("background","#f1f1f1");
+	$("tr:even").css("background","#d2f0f3");
+	$("#date_a").cxCalendar();
+</script>
+</html>

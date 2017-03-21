@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>rechargePage</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/global.css"/>
+<link rel="stylesheet" type="text/css" href="css/account.css"/>
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/comm.js"></script>
+</head>
+
+<body>
+<div id="header">
+    <div class="inner">
+        <ul class="service">
+            <li class="hotline"><i class="icons"></i><b>客服热线</b><em>400 890 3980</em></li>
+            <li class="concerns"><b>关注我们</b><a href="javascript:;" target="_blank" class="icons weixin"></a></li>
+        </ul>
+        <div class="loginbar">
+                     <div class="fl"><a href="register.html" style="color:#fc8936" rel="nofollow">免费注册</a><a href="login.html" style="color:#349cd8">立即登录</a></div>
+        </div>
+        <div class="logo">
+            <h2><a href="/"><img alt="网" src="images/logo.png" width="350" height="51"></a></h2>
+            <h1>口号</h1>
+        </div>
+        <div class="nav-wrapper">
+            <ul class="nav">
+                <li><a href="">首页</a></li>
+                <li><a href="">安全保障</a></li>
+                <li><a href="" target="_blank">帮助中心</a></li>
+            </ul>
+            <div class="use">
+            <a href="">我要投资</a>
+            <a href="" rel="nofollow">我要借款</a>
+            </div>
+        </div>
+    </div>
+    <div class="topbar"></div>
+    
+</div>
+<div id="wrapper">
+	<div id="sidebar">
+    	<div class="sidebar-item account-status">
+            <h2>Hi，噶愣兽</h2>
+            <div class="auth-opts">
+                <ul>               
+                    <li id="real_name" class="icons button-un-name" data-text="您尚未进行实名认证&lt;br&gt;&lt;a href='/secure/realNameAuthen.session.action'&gt;马上认证&lt;/a&gt;">用户验证</li>                 
+                    <li id="mobile" class="icons button-un-tels" data-text="您尚未绑定手机&lt;br&gt;&lt;a href='/secure/bindMobile.session.action'&gt;马上绑定&lt;/a&gt;">手机验证</li>            
+                    <li class="icons button-un-pwds" data-text="您尚未将支付密码与登录密码修改为不一致&lt;br&gt;&lt;a href='/secure/modifyPayPwd.session.action'&gt;马上修改&lt;/a&gt;">密码验证</li>
+                </ul>
+            </div>
+            <div class="auth-rate">
+                <div></div>
+            </div>
+            <div class="auth-level">安全等级:<em>
+            低
+            </em><a href="/secure/securityCenter.session.action" target="_blank">[提升]</a></div>
+        </div>
+        <div class="sidebar-item balances">
+            <h2>可用余额</h2>
+            <h3>￥0.00</h3>
+            <div class="recharge">
+            	<a href="" class="gbtn button-recharge"><i class="icons button-rmb"></i>充值</a>
+                <a href="" class="gbtn button-recharge dj">冻结保证金</a>
+            </div>
+        </div>
+        <dl class="apply-menu">
+            <dt>我的账户</dt>
+            <dd class="current">
+                <a href=""><i class="nav-ico nav-account"></i>账户总览</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-warn"></i>消息提醒</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-cash"></i>充值提现</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-card"></i>银行卡</a>
+            </dd> 
+            <dd>
+                <a href=""><i class="nav-ico nav-bag"></i>安全中心</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-chart"></i>资金统计</a>
+            </dd>
+        </dl>
+        <dl class="apply-menu">
+            <dt>我是投资者</dt>
+            <dd>
+                <a href=""><i class="nav-ico nav-chart"></i>我要投资</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-invest"></i>投资记录</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-redeem"></i>回款计划</a>
+            </dd>
+        </dl>
+        <dl class="apply-menu">
+            <dt>我是借入者</dt>
+            <dd>
+                <a href=""><i class="nav-ico nav-deal"></i>我要借款</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-borrowed"></i>借入记录</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-redeem"></i>还款安排</a>
+            </dd>
+        </dl>
+    </div>
+    <div id="main">
+        <div class="title-items backtohis">
+        	<a href="javascript:history.go(-1)" class="toback r3">
+            	<i class="icons arrow-gray-dotl"></i>返回
+            </a>
+            <h2>账户充值</h2>
+        	<b class="line"></b>
+        </div>
+        <div class="rech-opts">
+            <div class="rech-items">
+                <h2>充值金额</h2>
+                <ul class="rech-money">
+                    <li>
+                        <div class="sum-input">
+                            <label>￥</label>
+                            <input class="input" type="text" id="chargeSum" name="tranAmt">
+                        </div>
+                    </li>
+                    <li style="width:auto">
+                        <p><b>当前可用余额</b><span id="curBalance">0.00</span></p>
+                        <p><b>充值后余额</b><span class="light-green" id="sumBalance"></span></p>
+                    </li>
+                </ul>
+                <div class="msg-error" id="chargeSumErr"></div><!--错误提示放置区-->
+            </div>
+            <div class="rech-items">
+                <h2>充值方式</h2>
+                <ul class="rech-mode">
+                    <li class="banks-dir netBank selected" onclick="myFun(this.id)" id="netBanks">网上银行充值<i class="icons"></i><i class="icons" style="display:none"></i></li>
+                    <li class="banks-dir" id="tenpay" onclick="myFun(this.id)"><i class="logo-bank bank-cft">财付通</i><i class="icons" style="display:none"></i></li>
+                    <li class="banks-dir" id="gopay" onclick="myFun(this.id)"><i class="logo-bank bank-gfb">国付宝</i><i class="icons" style="display:none"></i></li>
+                </ul>
+            </div>
+            <div class="rech-items" id="selectBanks">
+                <h2>选择银行</h2>
+                <ul class="select-bank">
+                    <li class="banks-dir selected" title="工商银行" data-bankcode="102" id="icbc" onclick="myFun(this.id)" style="display: list-item;"><i class="logo-bank bank-102">工商银行</i><i class="icons"></i><i class="icons" style="display:none"></i></li>
+                    <li class="banks-dir" title="建设银行" data-bankcode="105" id="ccb" onclick="myFun(this.id)" style="display: list-item;"><i class="logo-bank bank-105">建设银行</i><i class="icons" style="display:none"></i></li>
+                    <li class="banks-dir" title="招商银行" data-bankcode="308" id="cmb" onclick="myFun(this.id)" style="display: list-item;"><i class="logo-bank bank-308">招商银行</i><i class="icons" style="display:none"></i></li>
+                    <li class="banks-dir" title="农业银行" data-bankcode="103" id="abc" onclick="myFun(this.id)" style="display: list-item;"><i class="logo-bank bank-103">农业银行</i><i class="icons" style="display:none"></i></li>
+                    <li class="banks-dir" title="交通银行" data-bankcode="301" id="comm" onclick="myFun(this.id)" style="display: list-item;"><i class="logo-bank bank-301">交通银行</i><i class="icons" style="display:none"></i></li>
+                    <li class="banks-dir" title="广发银行" data-bankcode="306" id="gdb" onclick="myFun(this.id)"><i class="logo-bank bank-306">广发银行</i><i class="icons" style="display:none"></i></li>
+                    <li class="banks-dir" title="兴业银行" data-bankcode="309" id="cib" onclick="myFun(this.id)"><i class="logo-bank bank-309">兴业银行</i><i class="icons" style="display:none"></i></li>
+                    <li class="banks-dir" title="光大银行" data-bankcode="303" id="ceb" onclick="myFun(this.id)"><i class="logo-bank bank-303">光大银行</i><i class="icons" style="display:none"></i></li>
+                    <li class="banks-dir" title="民生银行" data-bankcode="305" id="cmbc" onclick="myFun(this.id)"><i class="logo-bank bank-305">民生银行</i><i class="icons" style="display:none"></i></li>
+                    <li class="banks-dir" title="中国银行" data-bankcode="104" id="boc" onclick="myFun(this.id)"><i class="logo-bank bank-104">中国银行</i><i class="icons" style="display:none"></i></li>
+                    <li class="banks-dir" title="北京银行" data-bankcode="999" id="bjbank" onclick="myFun(this.id)"><i class="logo-bank bank-999">北京银行</i><i class="icons" style="display:none"></i></li>
+                    <li class="banks-dir" title="邮政储蓄" data-bankcode="403" id="psbc" onclick="myFun(this.id)"><i class="logo-bank bank-403">邮政储蓄</i><i class="icons" style="display:none"></i></li>
+                    <li class="banks-dir" title="中信银行" data-bankcode="302" id="citic" onclick="myFun(this.id)"><i class="logo-bank bank-302">中信银行</i><i class="icons" style="display:none"></i></li>
+                    <li class="banks-dir" title="平安银行" data-bankcode="313" id="spabank" onclick="myFun(this.id)"><i class="logo-bank bank-313">平安银行</i><i class="icons" style="display:none"></i></li>
+                    <li class="banks-dir" title="浦发银行" data-bankcode="310" id="spd" onclick="myFun(this.id)"><i class="logo-bank bank-310">浦发银行</i><i class="icons" style="display:none"></i></li>
+                    <!--
+                    <li class="banks-dir add-bank" data-bankcode="0"></li>
+                    -->
+                    <li class="other-banks"><span id="selectOtherBanks">选择其他银行<i class="icons arrow-blue-down"></i></span></li>
+                </ul>
+                <div class="bank-desc" style="display: block;"><table><tbody><tr><th rowspan="3">卡种</th><th colspan="2" rowspan="2">U盾客户</th><th>柜面注册存量</th><th colspan="2" rowspan="2">已开通手机短信认证<br>的电子银行口令卡客户</th><th colspan="2" rowspan="2">未开通手机短信认证<br>的电子银行口令卡客户</th></tr><tr><th>静态密码客户</th></tr><tr><th>单笔限额</th><th>每日限额</th><th>总累计限额</th><th>单笔限额</th><th>每日限额</th><th>单笔限额</th><th>每日限额</th></tr><tr><td>普通信用卡</td><td>信用卡本身透支限额</td><td>信用卡本身透支限额</td><td>300</td><td>2000</td><td>5000</td><td>500</td><td>1000</td></tr><tr><td>普通借记卡</td><td>无限额</td><td>无限额</td><td>300</td><td>2000</td><td>5000</td><td>500</td><td>1000</td></tr></tbody></table></div>
+            </div>
+            <div class="funds-ord">
+                <div class="yCheckbox" id="FundsSelect"><span class="ico"></span></div>
+                我同意《<a href="/v2/static/laws/tzzx.jsp" style="color:#349cd8">利至贷投资咨询与管理服务协议</a>》与《<a href="javascript:;" style="color:#349cd8" id="agreement">利至贷资金管理规定</a>》<span id="FundsTip" style=" display:none;color:#d35353"></span> 
+            </div>
+            <div class="rech-submit"><a href="javascript:;" class="gbtn recharge" id="rechargeSubmitBtn"><i class="icons button-rmb"></i>充值</a></div>
+            <div class="banks-tips">您的资金将从充值银行卡转入合作银行监管账户</div>
+        </div>
+        <div class="jTabs">
+            <ul id="rechTabs">
+                <li class="jTab current" style="margin-right:10px">温馨提示 </li>
+                <li class="jTab">充值遇到的问题</li>
+            </ul>
+        </div>
+        <div id="rechPanel" class="model-box">
+            <div class="jPanel" style="display: block;">
+                <div class="help-recharge">
+                    <p>1. 为了您的资金安全，请您在充值之前先完成实名认证；</p>
+                    <p>2. 每日的充值限额依据各银行限额为准；</p>
+                    <p>3. 严禁利用充值功能进行信用卡套现、转账、洗钱等行为，一经发现，资金将退回原卡并封停账号30天；</p>
+                    <p>4. 充值后未用于投资的提现申请金额，将视情况通过第三方支付平台退回原卡，到账时间以发卡行通知为准；</p>
+                    <p>5. 点击充值按钮，表示您已经仔细阅读并同意《利至贷投资咨询与管理服务协议》中有关资金管理的规定条款。</p>
+                </div>
+            </div>
+            <div class="jPanel" style="display: none;">
+                <div class="help-recharge">
+                    <p style="font-weight:bold">1. 我可以如何充值？没有第三方支付的账户是否也可以充值？</p>
+                    <p>答：您在"我的账户"首页可看到"充值"按钮，点击充值，会自动弹出充值页面，按照操作提示一步步进行即可。没有第三方支付账户也可以进行充值，只要您有网银账户。</p>
+                    <p>&nbsp;</p>
+                    <p style="font-weight:bold">2. 为什么网上银行充值成功，但是利至贷帐号里面的余额却没有增加？</p>
+                    <p>答：由于在同一时间使用同一个第三方充值账户端口充值的人可能非常多，在某些时候会造成网银显示与利至贷账号金额不同步的情况。如果遇到这种情况请您将网银付款成功的页面截图，然后刷新利至贷账户页面。如果刷新未能解决问题，请您致电客服400 890 3980，客服专员会指导发送截图并马上处理您的问题。</p>
+                    <p>&nbsp;</p>
+                    <p><a href="/static/help/">查看更多帮助</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="footer">
+    <div class="inner">
+        <div class="fool">
+            <ul class="navsub">
+                <li><a href="">关于我们</a></li>
+                <li><a href="">帮助中心</a></li>
+                <li><a href="">新闻中心</a></li>
+                <li><a href="">保障说明</a></li>
+                <li><a href="">联系我们</a></li>
+                <li><a href="">友情链接</a></li>
+            </ul>
+            <div class="cabout">
+                <h2>关注我们</h2>
+                <ul>
+                    <li><a href="" target="_blank" class="weibo hovereffect" rel="nofollow"><i class="icons">官方新浪微博</i></a></li>
+                    <li><a href="javascript:;" class="weixin hovereffect" rel="nofollow"><i class="icons">官方微信</i></a></li>
+                    
+                </ul>
+            </div>
+            <div class="letter">
+            	<a title="网信认证" href="" target="_blank" class="icons yx" rel="nofollow"></a>
+                <a title="VeriSign加密服务" href="" target="_blank" class="icons yn" rel="nofollow"></a>
+                <a title="可信网站" href="" target="_blank" class="icons yk" rel="nofollow"></a>
+                <a title="诚信网站" href="" target="_blank" class="icons yc" rel="nofollow"></a>
+                <a title="网上交易保障中心" href="" target="_blank" class="icons yb" rel="nofollow"></a>
+            </div>
+            <div class="rights">利至贷--上利至，有利至 Copyright 2013 Yooli.com, All Rights Reserved				            </div>
+        </div>
+        <div class="foor">
+            <div class="hotl">
+                <p>客服热线</p>
+                <p><em>400 890 3980</em></p>
+                <p>客服邮箱 kefu@yooli.com 
+                    <a rel="nofollow" id="onlineService" class="online" href="javascript:void(0)">在线客服<i class="icons"></i></a>
+                </p>
+            </div>
+            <div class="fico">
+            	<a href="javascript:void(0)" class="icons">FICO</a>利至贷使用与世界最大信用评分机构美国FICO(费埃哲)<p>联合开发的<span class="tm">信用评分卡</span> 及<span class="tm">决策引擎</span></p></div>
+            <div class="read">版权所有 京ICP备13047550号-1</div>
+        </div>
+    </div>
+    <div class="t"></div>
+    <div class="b"></div>
+</div>
+<script src="js/carousel.js" type="text/javascript"></script>
+<script src="js/account.set.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/recharge.js"></script>
+</body>
+</html>

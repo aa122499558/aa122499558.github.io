@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/header&footer.css" rel="stylesheet" type="text/css"/>
+    <link href="css/character-list.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/obj.js"></script>
+</head>
+<body>
+<div id="header">
+    <div class="sub">
+        <a href="index.html" class="logo"></a>
+        <form class="search" action="">
+            <input type="text" class="tx" name="search"/>
+            <input type="submit" value="搜索" class="btn" />
+            <i></i>
+        </form>
+        <ul class="nav">
+            <li class="active"><a href="#">首页</a></li>
+            <li ><a href="#">创业公司</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">风云人物</a></li>
+            <li><a href="#">活动</a></li>
+        </ul>
+    </div>
+</div>
+<div class="main">
+    <div class="chara-list">
+        <ul id="container">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="last"></li>
+        </ul>
+    </div>
+    <form class="page" action="">
+        <a href="#" class="first">首页</a>
+        <a href="prev">上一页</a>
+        <a href="next">下一页</a>
+        <a href="last">末页</a>
+        <span class="num">1/100</span>
+        <div class="roll">转到<input name="page" type="text"/>页</div>
+        <input type="submit" value="go" class="go"/>
+    </form>
+</div>
+<div id="footer">
+    <div class="sub">
+        <ul>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">会议活动</a></li>
+            <li><a href="#">广告与服务</a></li>
+            <li><a href="#">媒体合作</a></li>
+            <li><a href="#">版权声明</a></li>
+            <li><a href="#">诚聘英才</a></li>
+            <li><a href="#">杂志订阅</a></li>
+            <li><a href="#">网站地图</a></li>
+            <li><a href="#">创业故事</a></li>
+            <li><a href="#">意见反馈</a></li>
+            <li><a href="#">手机版</a></li>
+            <li><a href="#">周报订阅</a></li>
+        </ul><br/>
+        <p>Copyright 2007-2015 zouyoubang.com All rights reseved 粤ICP备15069330号-1</p>
+    </div>
+</div>
+<div class="rolltop">∧</div>
+</body>
+<script>
+    $(function(){
+        init.text( $('.tx'),'热门搜索,马云,马化腾');  // 初始化搜索栏的默认内容,第一个参数是要初始化内容的input,第二个是要初始化的内容;
+        init.rollTop(); //回到顶部
+        init.slider($('.slider'),2000);  //轮播图 第一个是轮播图的最外层,第二个参数是每过多少秒滑动一次;
+        var chaData = [
+            { pic:"img/01.jpg" ,title:"马云的成长故事与创业故事",main:'1988年，马云去杭州电子工业学院教外语，这是他的第一份工作。当时工资大约每月110元。不甘寂寞的他找了不少兼职，并利用课余时间为到杭州观光的外国游客担任导游。西湖边的第一个英语角就是马云发起的。',date:"2016-04-28 00:04",link:"#"},
+            { pic:"img/character.png" ,title:"比尔盖茨的成长故事与创业故事",main:'自中学8年级起，盖茨便利用闲暇时间从事电脑程序设计的工作，并且从中获利。根据盖茨自己陈述：“我在十叁岁时写了我的第一个软体程序，我拿它来玩井字游戏。当时我所用的电脑体积庞大、笨重、速度缓慢而且相当‘不听话’。”1973年盖茨进入哈佛大学就读，两年后，也就是1975年，自动办理退学，与保罗·艾伦一同写下电脑语言BASIC版本。',date:"2016-04-28 00:04",link:"#"},
+            { pic:"img/01.jpg" ,title:"马云的成长故事与创业故事",main:'1988年，马云去杭州电子工业学院教外语，这是他的第一份工作。当时工资大约每月110元。不甘寂寞的他找了不少兼职，并利用课余时间为到杭州观光的外国游客担任导游。西湖边的第一个英语角就是马云发起的。',date:"2016-04-28 00:04",link:"#"},
+            { pic:"img/character.png" ,title:"比尔盖茨的成长故事与创业故事",main:'自中学8年级起，盖茨便利用闲暇时间从事电脑程序设计的工作，并且从中获利。根据盖茨自己陈述：“我在十叁岁时写了我的第一个软体程序，我拿它来玩井字游戏。当时我所用的电脑体积庞大、笨重、速度缓慢而且相当‘不听话’。”1973年盖茨进入哈佛大学就读，两年后，也就是1975年，自动办理退学，与保罗·艾伦一同写下电脑语言BASIC版本。',date:"2016-04-28 00:04",link:"#"},
+            { pic:"img/01.jpg" ,title:"马云的成长故事与创业故事",main:'1988年，马云去杭州电子工业学院教外语，这是他的第一份工作。当时工资大约每月110元。不甘寂寞的他找了不少兼职，并利用课余时间为到杭州观光的外国游客担任导游。西湖边的第一个英语角就是马云发起的。',date:"2016-04-28 00:04",link:"#"},
+            { pic:"img/character.png" ,title:"比尔盖茨的成长故事与创业故事",main:'自中学8年级起，盖茨便利用闲暇时间从事电脑程序设计的工作，并且从中获利。根据盖茨自己陈述：“我在十叁岁时写了我的第一个软体程序，我拿它来玩井字游戏。当时我所用的电脑体积庞大、笨重、速度缓慢而且相当‘不听话’。”1973年盖茨进入哈佛大学就读，两年后，也就是1975年，自动办理退学，与保罗·艾伦一同写下电脑语言BASIC版本。',date:"2016-04-28 00:04",link:"#"},
+            { pic:"img/01.jpg" ,title:"马云的成长故事与创业故事",main:'1988年，马云去杭州电子工业学院教外语，这是他的第一份工作。当时工资大约每月110元。不甘寂寞的他找了不少兼职，并利用课余时间为到杭州观光的外国游客担任导游。西湖边的第一个英语角就是马云发起的。',date:"2016-04-28 00:04",link:"#"},
+            { pic:"img/01.jpg" ,title:"马云的成长故事与创业故事",main:'1988年，马云去杭州电子工业学院教外语，这是他的第一份工作。当时工资大约每月110元。不甘寂寞的他找了不少兼职，并利用课余时间为到杭州观光的外国游客担任导游。西湖边的第一个英语角就是马云发起的。',date:"2016-04-28 00:04",link:"#"},
+            { pic:"img/01.jpg" ,title:"马云的成长故事与创业故事",main:'1988年，马云去杭州电子工业学院教外语，这是他的第一份工作。当时工资大约每月110元。不甘寂寞的他找了不少兼职，并利用课余时间为到杭州观光的外国游客担任导游。西湖边的第一个英语角就是马云发起的。',date:"2016-04-28 00:04",link:"#"},
+            { pic:"img/character.png" ,title:"比尔盖茨的成长故事与创业故事",main:'自中学8年级起，盖茨便利用闲暇时间从事电脑程序设计的工作，并且从中获利。根据盖茨自己陈述：“我在十叁岁时写了我的第一个软体程序，我拿它来玩井字游戏。当时我所用的电脑体积庞大、笨重、速度缓慢而且相当‘不听话’。”1973年盖茨进入哈佛大学就读，两年后，也就是1975年，自动办理退学，与保罗·艾伦一同写下电脑语言BASIC版本。',date:"2016-04-28 00:04",link:"#"},
+            { pic:"img/01.jpg" ,title:"马云的成长故事与创业故事",main:'1988年，马云去杭州电子工业学院教外语，这是他的第一份工作。当时工资大约每月110元。不甘寂寞的他找了不少兼职，并利用课余时间为到杭州观光的外国游客担任导游。西湖边的第一个英语角就是马云发起的。',date:"2016-04-28 00:04",link:"#"},
+            { pic:"img/character.png" ,title:"比尔盖茨的成长故事与创业故事",main:'自中学8年级起，盖茨便利用闲暇时间从事电脑程序设计的工作，并且从中获利。根据盖茨自己陈述：“我在十叁岁时写了我的第一个软体程序，我拿它来玩井字游戏。当时我所用的电脑体积庞大、笨重、速度缓慢而且相当‘不听话’。”1973年盖茨进入哈佛大学就读，两年后，也就是1975年，自动办理退学，与保罗·艾伦一同写下电脑语言BASIC版本。',date:"2016-04-28 00:04",link:"#"}
+        ];
+        init.chaList($('#container'),chaData);  //第一个参数是人物列表主体,第二个是数据
+    });
+</script>
+</html>

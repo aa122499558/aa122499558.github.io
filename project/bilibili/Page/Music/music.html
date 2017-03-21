@@ -1,0 +1,20 @@
+<div id="main" ng-controller="public" class="loop" myname="music">
+    <div class="con w980">
+        <slider my-class="large" my-data="music.data.home.slider"></slider>
+        <hot my-data="music.data.home.hot" my-class="music_s"></hot>
+    </div>
+    <ul class="main-list">
+        <li>
+            <partition my-data="music.data.home.cover" my-class="music_fc"></partition>
+            <ranking my-data="music.data.home.coverRanking" my-class="mu_ran"></ranking>
+        </li>
+        <li>
+            <partition my-data="music.data.home.play" my-class="music_fc"></partition>
+            <ranking my-data="music.data.home.playRanking" my-class="mu_ran"></ranking>
+        </li>
+        <li>
+            <partition my-data="music.data.home.v" my-class="music_fc"></partition>
+            <ranking my-data="music.data.home.vRanking" my-class="mu_ran"></ranking>
+        </li>
+    </ul>
+</div>

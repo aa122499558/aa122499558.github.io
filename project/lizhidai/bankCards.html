@@ -1,0 +1,439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>bankCards</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/global.css"/>
+<link rel="stylesheet" type="text/css" href="css/account.css"/>
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/global-1.1.0.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="header">
+    <div class="inner">
+        <ul class="service">
+            <li class="hotline"><i class="icons"></i><b>客服热线</b><em>400 890 3980</em></li>
+            <li class="concerns"><b>关注我们</b><a href="javascript:;" target="_blank" class="icons weixin"></a></li>
+        </ul>
+        <div class="loginbar">
+                     <div class="fl"><a href="register.html" style="color:#fc8936" rel="nofollow">免费注册</a><a href="login.html" style="color:#349cd8">立即登录</a></div>
+        </div>
+        <div class="logo">
+            <h2><a href="/"><img alt="网" src="images/logo.png" width="350" height="51"></a></h2>
+            <h1>口号</h1>
+        </div>
+        <div class="nav-wrapper">
+            <ul class="nav">
+                <li><a href="">首页</a></li>
+                <li><a href="">安全保障</a></li>
+                <li><a href="" target="_blank">帮助中心</a></li>
+            </ul>
+            <div class="use">
+            <a href="">我要投资</a>
+            <a href="" rel="nofollow">我要借款</a>
+            </div>
+        </div>
+    </div>
+    <div class="topbar"></div>
+    
+</div>
+<div id="wrapper">
+	<div id="sidebar">
+    	<div class="sidebar-item account-status">
+            <h2>Hi，噶愣兽</h2>
+            <div class="auth-opts">
+                <ul>               
+                    <li id="real_name" class="icons button-un-name" data-text="您尚未进行实名认证&lt;br&gt;&lt;a href='/secure/realNameAuthen.session.action'&gt;马上认证&lt;/a&gt;">用户验证</li>                 
+                    <li id="mobile" class="icons button-un-tels" data-text="您尚未绑定手机&lt;br&gt;&lt;a href='/secure/bindMobile.session.action'&gt;马上绑定&lt;/a&gt;">手机验证</li>            
+                    <li class="icons button-un-pwds" data-text="您尚未将支付密码与登录密码修改为不一致&lt;br&gt;&lt;a href='/secure/modifyPayPwd.session.action'&gt;马上修改&lt;/a&gt;">密码验证</li>
+                </ul>
+            </div>
+            <div class="auth-rate">
+                <div></div>
+            </div>
+            <div class="auth-level">安全等级:<em>
+            低
+            </em><a href="/secure/securityCenter.session.action" target="_blank">[提升]</a></div>
+        </div>
+        <div class="sidebar-item balances">
+            <h2>可用余额</h2>
+            <h3>￥0.00</h3>
+            <div class="recharge">
+            	<a href="" class="gbtn button-recharge"><i class="icons button-rmb"></i>充值</a>
+                <a href="" class="gbtn button-recharge dj">冻结保证金</a>
+            </div>
+        </div>
+        <dl class="apply-menu">
+            <dt>我的账户</dt>
+            <dd class="current">
+                <a href=""><i class="nav-ico nav-account"></i>账户总览</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-warn"></i>消息提醒</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-cash"></i>充值提现</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-card"></i>银行卡</a>
+            </dd> 
+            <dd>
+                <a href=""><i class="nav-ico nav-bag"></i>安全中心</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-chart"></i>资金统计</a>
+            </dd>
+        </dl>
+        <dl class="apply-menu">
+            <dt>我是投资者</dt>
+            <dd>
+                <a href=""><i class="nav-ico nav-chart"></i>我要投资</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-invest"></i>投资记录</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-redeem"></i>回款计划</a>
+            </dd>
+        </dl>
+        <dl class="apply-menu">
+            <dt>我是借入者</dt>
+            <dd>
+                <a href=""><i class="nav-ico nav-deal"></i>我要借款</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-borrowed"></i>借入记录</a>
+            </dd>
+            <dd>
+                <a href=""><i class="nav-ico nav-redeem"></i>还款安排</a>
+            </dd>
+        </dl>
+    </div>
+    <div id="main">
+        <div class="title-items">
+            <h2>银行卡管理</h2>
+        	<b class="line"></b>
+        </div>
+		<div class="bankcards-wrap" id="AddBankCardCont">
+            <div class="model-box bank-card bank-card-add">
+                <div class="bank-add-button"> <a href="javascript:;"><i class="icons add-blue"></i>添加一张银行卡</a> </div>
+                <div class="bank-card-opt">
+                    <div class="head">
+                        <div class="title"><i class="icons add-gray"></i>添加一张银行卡</div>
+                    </div>
+                    <form id="addNewCardForm" action="addNewCard.session.action" method="post">
+                    
+                    <input type="hidden" name="isbind" id="isbind" value="1">
+                    
+                    
+                    <input type="hidden" name="addChannel" value="1">
+                    <div class="bank-items">
+                        <ul>
+                            <li>
+                                <label>持卡人</label>
+                                <input type="text" class="input" name="userName" id="BankUserName" value="" style="background:#f0f5f7" readonly="">
+                            </li>
+                            <li>
+                                <label>卡号</label>
+                                <input type="text" class="input" name="cardNo" id="BankCardNumber" value="" maxlength="19">
+                            </li>
+                            <li>
+                                <label>银行</label>
+                                <input type="text" value="未选择银行" name="bankCheck" id="BankCheck" style="width:170px; border:0; padding-top:8px" disabled="disabled">
+                                <input type="hidden" name="bankId" id="bankId" value="">
+                                <span class="bank-select" id="BankSelect">请选择<i class="icons arrow-blue-down"></i></span> </li>
+                            <li>
+                                <label>开户城市</label>
+                                <input type="text" class="input" name="bankCity" id="BankCity" autocomplete="off" style="color: rgb(153, 153, 153);">
+                            </li>
+                            <li>
+                                <label>开户行</label>
+                                <input type="text" class="input" name="bankName" id="HouseBankName" autocomplete="off" style="color: rgb(153, 153, 153);">
+                                <input type="hidden" id="HouseBankCode" name="accountBankId">
+                            </li>
+                        </ul>
+                        <div class="Error"></div>
+                    </div>
+                    </form>
+                    <div class="foot">
+                        <div class="bank-action"><a href="javascript:;" class="r3 bank-delete" id="cancelBank"><i class="icons yclose"></i>取消</a><a href="javascript:addnewcard();" class="r3 bank-bind" id="AddBankCardButton"><i class="icons cm-white"></i>添加</a></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+<div id="footer">
+    <div class="inner">
+        <div class="fool">
+            <ul class="navsub">
+                <li><a href="">关于我们</a></li>
+                <li><a href="">帮助中心</a></li>
+                <li><a href="">新闻中心</a></li>
+                <li><a href="">保障说明</a></li>
+                <li><a href="">联系我们</a></li>
+                <li><a href="">友情链接</a></li>
+            </ul>
+            <div class="cabout">
+                <h2>关注我们</h2>
+                <ul>
+                    <li><a href="" target="_blank" class="weibo hovereffect" rel="nofollow"><i class="icons">官方新浪微博</i></a></li>
+                    <li><a href="javascript:;" class="weixin hovereffect" rel="nofollow"><i class="icons">官方微信</i></a></li>
+                    
+                </ul>
+            </div>
+            <div class="letter">
+            	<a title="网信认证" href="" target="_blank" class="icons yx" rel="nofollow"></a>
+                <a title="VeriSign加密服务" href="" target="_blank" class="icons yn" rel="nofollow"></a>
+                <a title="可信网站" href="" target="_blank" class="icons yk" rel="nofollow"></a>
+                <a title="诚信网站" href="" target="_blank" class="icons yc" rel="nofollow"></a>
+                <a title="网上交易保障中心" href="" target="_blank" class="icons yb" rel="nofollow"></a>
+            </div>
+            <div class="rights">利至贷--上利至，有利至 Copyright 2013 Yooli.com, All Rights Reserved				            </div>
+        </div>
+        <div class="foor">
+            <div class="hotl">
+                <p>客服热线</p>
+                <p><em>400 890 3980</em></p>
+                <p>客服邮箱 kefu@yooli.com 
+                    <a rel="nofollow" id="onlineService" class="online" href="javascript:void(0)">在线客服<i class="icons"></i></a>
+                </p>
+            </div>
+            <div class="fico">
+            	<a href="javascript:void(0)" class="icons">FICO</a>利至贷使用与世界最大信用评分机构美国FICO(费埃哲)<p>联合开发的<span class="tm">信用评分卡</span> 及<span class="tm">决策引擎</span></p></div>
+            <div class="read">版权所有 京ICP备13047550号-1</div>
+        </div>
+    </div>
+    <div class="t"></div>
+    <div class="b"></div>
+</div>
+<style type="text/css">
+.bank-select-entry{ overflow:hidden; zoom:1}
+.bank-select-entry ul{ overflow:hidden; zoom:1; padding-left:15px}
+.bank-select-entry li{ float:left; display:inline; width:155px; height:30px; line-height:30px; overflow:hidden; padding-left:20px; position:relative}
+.bank-select-entry input,.bank-select-entry label{ float:left; display:inline; position:relative; cursor:pointer}
+.bank-select-entry input{ position:absolute; left:0; top:9px}
+.bank-select-entry .bank-top{ padding-top:15px}
+.bank-select-entry .bank-top li{ height:50px; line-height:50px}
+.bank-select-entry .bank-top label{ width:125px; height:35px; overflow:hidden; border:1px solid #e7ecee}
+.bank-select-entry .bank-text{ padding-bottom:15px; display:none}
+.bank-select-entry .bank-text input{ top:6px}
+.bank-select-entry .bank-text label:hover{ color:#349cd8; text-decoration:underline}
+.bank-select-entry .bank-more{ height:25px; clear:both; padding:0 15px}
+.bank-select-entry .bank-more a{ position:relative; color:#349cd8; padding-right:12px}
+.bank-select-entry .bank-more a:visited{ color:#349cd8}
+.bank-select-entry .bank-more .icons{ position:absolute; right:0; top:7px}
+</style>
+<div id="BankSelectDialog" class="dialog-main" style="width:715px">
+    <div class="dialog-head">
+        <h2>选择银行</h2>
+        <a href="javascript:;" class="closeModal r3"><i class="icons">关闭</i></a></div>
+    <div class="bank-select-entry" id="BankSelectEntry">
+        <ul class="bank-top">
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_1" value="中国工商银行_102">
+                <label for="bankRadio_1"><i class="logo-bank bank-102">中国工商银行</i></label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_2" value="中国建设银行_105">
+                <label for="bankRadio_2"><i class="logo-bank bank-105">中国建设银行</i></label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_3" value="中国农业银行_103">
+                <label for="bankRadio_3"><i class="logo-bank bank-103">中国农业银行</i></label>
+            </li>
+            <li>
+               <input type="radio" name="bankRadio" id="bankRadio_4" value="中国邮政储蓄银行_403">
+                <label for="bankRadio_4"><i class="logo-bank bank-403">中国邮政储蓄银行</i></label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_5" value="中国银行_104">
+                <label for="bankRadio_5"><i class="logo-bank bank-104">中国银行</i></label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_6" value="交通银行_301">
+                <label for="bankRadio_6"><i class="logo-bank bank-301">交通银行</i></label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_7" value="招商银行_308">
+                <label for="bankRadio_7"><i class="logo-bank bank-308">招商银行</i></label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_8" value="中国光大银行_303">
+                <label for="bankRadio_8"><i class="logo-bank bank-303">中国光大银行</i></label>
+            </li>  
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_9" value="上海浦东发展银行_310">
+                <label for="bankRadio_9"><i class="logo-bank bank-310">上海浦东发展银行</i></label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_10" value="华夏银行_304">
+                <label for="bankRadio_10"><i class="logo-bank bank-304">华夏银行</i></label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_11" value="广东发展银行_306">
+                <label for="bankRadio_11"><i class="logo-bank bank-306">广东发展银行</i></label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_12" value="中信实业银行_302">
+                <label for="bankRadio_12"><i class="logo-bank bank-302">中信实业银行</i></label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_13" value="兴业银行_309">
+                <label for="bankRadio_13"><i class="logo-bank bank-309">兴业银行</i></label>
+            </li>
+            
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_15" value="中国民生银行_305">
+                <label for="bankRadio_15"><i class="logo-bank bank-305">中国民生银行</i></label>
+            </li>
+        </ul>
+        <div class="bank-more"><a href="javascript:;">选择其他银行<i class="icons arrow-down"></i></a></div>
+        <ul class="bank-text">
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_16" value="国家开发银行_201">
+                <label for="bankRadio_16">国家开发银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_17" value="首都银行及信托公司_616">
+                <label for="bankRadio_17">首都银行及信托公司</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_18" value="中国进出口银行_202">
+                <label for="bankRadio_18">中国进出口银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_19" value="渣打银行_671">
+                <label for="bankRadio_19">渣打银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_20" value="中国农业发展银行_203">
+                <label for="bankRadio_20">中国农业发展银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_21" value="德意志银行_712">
+                <label for="bankRadio_21">德意志银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_22" value="城市商业银行_904">
+                <label for="bankRadio_22">城市商业银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_23" value="澳新银行_761">
+                <label for="bankRadio_23">澳新银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_24" value="香港上海汇丰银行_501">
+                <label for="bankRadio_24">香港上海汇丰银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_25" value="珠海南通银行_771">
+                <label for="bankRadio_25">珠海南通银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_26" value="东亚银行_502">
+                <label for="bankRadio_26">东亚银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_27" value="宁波国际银行_772">
+                <label for="bankRadio_27">宁波国际银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_28" value="南洋商业银行_503">
+                <label for="bankRadio_28">南洋商业银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_29" value="新联商业银行_773">
+                <label for="bankRadio_29">新联商业银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_30" value="恒生银行_504">
+                <label for="bankRadio_30">恒生银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_31" value="协和银行_774">
+                <label for="bankRadio_31">协和银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_32" value="集友银行_506">
+                <label for="bankRadio_32">集友银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_33" value="厦门国际银行_781">
+                <label for="bankRadio_33">厦门国际银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_34" value="廖创兴银行_507">
+                <label for="bankRadio_34">廖创兴银行</label>
+            </li>
+            <li>
+               <input type="radio" name="bankRadio" id="bankRadio_35" value="福建亚洲银行_783">
+                <label for="bankRadio_35">福建亚洲银行</label>
+            </li>
+            <li>
+               <input type="radio" name="bankRadio" id="bankRadio_36" value="友利银行_593">
+                <label for="bankRadio_36">友利银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_37" value="浙江商业银行_784">
+                <label for="bankRadio_37">浙江商业银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_38" value="新韩银行_595">
+                <label for="bankRadio_38">新韩银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_39" value="华商银行_785">
+                <label for="bankRadio_39">华商银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_40" value="韩亚银行_597">
+                <label for="bankRadio_40">韩亚银行</label>
+            </li>
+            <li>
+
+                <input type="radio" name="bankRadio" id="bankRadio_41" value="青岛国际银行_786">
+                <label for="bankRadio_41">青岛国际银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_42" value="马来亚银行_611">
+                <label for="bankRadio_42">马来亚银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_43" value="华一银行_787">
+                <label for="bankRadio_43">华一银行</label>
+            </li>
+            <li>
+                <input type="radio" name="bankRadio" id="bankRadio_44" value="平安银行_313">
+                <label for="bankRadio_44">平安银行</label>
+            </li>
+        </ul>
+    </div>
+    <div class="dialog-foot">
+        <div class="bank-action"><a href="javascript:;" class="closeModal r3 bank-delete"><i class="icons yclose"></i>取消</a><a href="javascript:;" class="r3 bank-bind"><i class="icons cm-white"></i>确认</a><span class="mError"></span></div>
+    </div>
+</div>
+<script type="text/javascript">
+$(function(){
+	var bankDialog = $('#BankSelectDialog');
+	var bankMore = bankDialog.find('.bank-more a');
+	var blanks = bankDialog.find('.bank-text');
+	bankMore.click(function(){
+		if(blanks.is(':visible')){
+			bankMore.find('.icons').removeClass('arrow-up').addClass('arrow-down');
+			blanks.hide()
+		} else {
+			bankMore.find('.icons').removeClass('arrow-down').addClass('arrow-up');
+			blanks.show()
+		}
+		Util.jDialog.Modal('BankSelectDialog','BankSelectEntry');
+	});
+});
+</script>
+<script src="js/bankcard.js" type="text/javascript"></script>
+</body>
+</html>
