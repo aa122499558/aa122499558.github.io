@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>购物车</title>
+    <!-- css S -->
+    <link href="http://cdn.bootcss.com/weui/1.1.0/style/weui.min.css" rel="stylesheet">
+    <link href="assets/css/lrtStyle.css" rel="stylesheet"/>
+    <!-- css E -->
+</head>
+<body>
+<!-- 头部 -->
+<div class="sub-head weui-cell_access" style="position:fixed;">
+    <a class="retreat iconfont icon-retreat" href="javascript:history.go(-1);"></a>
+    购物车
+    <a class="more iconfont icon-more" href="javascript:void(0);"></a>
+</div>
+<div style="height:41px;"></div>
+
+<!-- 子导航[上面弹出] -->
+<ul class="sub-nav">
+    <li><a href="./index.html">主页</a></li>
+    <li><a href="./machine.html">分类</a></li>
+    <li><a href="./shop-car.html">购物车</a></li>
+    <li><a href="./user.html">我</a></li>
+</ul>
+
+<div class="shop-car">
+
+
+    <form action="">
+        <div class="weui-panel__bd weui-cells weui-cells_checkbox">
+            <!-- 商品子列表 S -->
+            <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg shop-list">
+                <label class="weui-cell weui-check__label" for="s11">
+                    <div class="weui-cell__hd">
+                        <input type="checkbox" class="weui-check" id="s11" name="subBox" checked="checked">
+                        <i class="weui-icon-checked"></i>
+                    </div>
+                </label>
+                <!-- 商品缩略图 S-->
+                <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="assets/images/greens/3.jpg" alt="">
+                </div>
+
+                <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">上海青</h4>
+                    <div class="weui-media-box__desc count">
+                        <!-- 商品数量 -->
+                        <div class="form-section quantity">
+                            <div>
+                                <input type="button" value="-"/>
+                                <input type="number" name="quantity" value="1"/>
+                                <input type="button" value="+"/>
+                            </div>
+                        </div>
+
+                        <!-- price="500" 商品【单】价 -->
+                        <p>小计:<i>￥</i><span class="price" price="29">29</span></p>
+                    </div>
+                </div>
+                <div class="del">删除</div>
+            </a>
+
+            <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg shop-list">
+
+                <label class="weui-cell weui-check__label" for="s12">
+                    <div class="weui-cell__hd">
+                        <input type="checkbox" class="weui-check" id="s12" name="subBox" checked="checked">
+                        <i class="weui-icon-checked"></i>
+                    </div>
+                </label>
+
+                <!-- 商品缩略图 S-->
+                <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="assets/images/greens/4.jpg" alt="">
+                </div>
+
+                <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">奶油白菜</h4>
+                    <div class="weui-media-box__desc count">
+                        <!-- 商品数量 -->
+                        <div class="form-section quantity">
+                            <div>
+                                <input type="button" value="-"/>
+                                <input type="number" name="quantity" value="1"/>
+                                <input type="button" value="+"/>
+                            </div>
+                        </div>
+
+                        <!-- price="500" 商品【单】价 -->
+                        <p>小计:<i>￥</i><span class="price" price="89">89</span></p>
+                    </div>
+                </div>
+                <div class="del">删除</div>
+            </a>
+
+            <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg shop-list">
+
+                <label class="weui-cell weui-check__label" for="s13">
+                    <div class="weui-cell__hd">
+                        <input type="checkbox" class="weui-check" id="s13" name="subBox" checked="checked">
+                        <i class="weui-icon-checked"></i>
+                    </div>
+                </label>
+
+                <!-- 商品缩略图 S-->
+                <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="assets/images/greens/5.jpg" alt="">
+                </div>
+
+                <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">奶油白菜</h4>
+                    <div class="weui-media-box__desc count">
+                        <!-- 商品数量 -->
+                        <div class="form-section quantity">
+                            <div>
+                                <input type="button" value="-"/>
+                                <input type="number" name="quantity" value="1"/>
+                                <input type="button" value="+"/>
+                            </div>
+                        </div>
+
+                        <!-- price="500" 商品【单】价 -->
+                        <p>小计:<i>￥</i><span class="price" price="89">89</span></p>
+                    </div>
+                </div>
+                <div class="del">删除</div>
+            </a>
+
+            <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg shop-list">
+
+                <label class="weui-cell weui-check__label" for="s14">
+                    <div class="weui-cell__hd">
+                        <input type="checkbox" class="weui-check" id="s14" name="subBox" checked="checked">
+                        <i class="weui-icon-checked"></i>
+                    </div>
+                </label>
+
+                <!-- 商品缩略图 S-->
+                <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="assets/images/greens/6.jpg" alt="">
+                </div>
+
+                <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">奶油白菜</h4>
+                    <div class="weui-media-box__desc count">
+                        <!-- 商品数量 -->
+                        <div class="form-section quantity">
+                            <div>
+                                <input type="button" value="-"/>
+                                <input type="number" name="quantity" value="1"/>
+                                <input type="button" value="+"/>
+                            </div>
+                        </div>
+
+                        <!-- price="500" 商品【单】价 -->
+                        <p>小计:<i>￥</i><span class="price" price="89">89</span></p>
+                    </div>
+                </div>
+                <div class="del">删除</div>
+            </a>
+            <!-- 商品子列表 E -->
+        </div>
+
+        <!-- 提交 -->
+        <div class="car-footer">
+            <div class="weui-cells weui-cells_checkbox">
+                <label class="weui-cell weui-check__label" for="checkAll">
+                    <div class="weui-cell__hd">
+                        <input type="checkbox" class="weui-check" name="checkbox1" id="checkAll" checked="checked">
+                        <i class="weui-icon-checked"></i>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <p>全选</p>
+                    </div>
+                </label>
+            </div>
+            <input type="submit" value="去结算" class="weui-btn weui-btn_mini weui-btn_primary">
+
+            <div class="money">
+                商品总数:<span>2</span>件<br/>
+                总计:￥<span> 6898</span>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+<div class="placeholder"></div>
+
+<script src="http://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+<script>
+
+    //子导航弹出动画
+    var nf = true ;
+    function animateIn(){
+        $('.sub-nav').addClass('animate').show().removeClass('out');
+        nf = false;
+    }
+    function animateOut(){
+        $('.sub-nav').removeClass('animate').addClass('out');
+        nf = true;
+    }
+    $('.icon-more').click(function(){
+        nf?animateIn():animateOut();
+    });
+
+    $( document ).click(function(){
+        animateOut();
+    });
+
+    $(".sub-head").click(function(event){
+        event.stopPropagation();
+    });
+
+    // 初始化商品的数量与总价
+    var money = $('.money');
+    function init(){
+        var all = 0;
+        var n = 0;
+        var len = 0;
+        $('.shop-list').each(function(){
+            if( $( this).find('.weui-check').is(':checked') ){
+                $(this).find('.count input').removeAttr("disabled");
+                all += parseInt ( $(this).find('.price').html() );
+                len += parseInt( $(this).find('.count').find('input').eq(1).val() );
+
+            }else{
+                $(this).find('.count input').attr('disabled',true);
+            }
+        });
+        money.find('span').eq( 0 ).html( len );
+        money.find('span').eq( 1).html( all );
+        quantity();
+    }
+    init();
+
+    //勾选商品
+    $('.weui-panel__bd .weui-check').click(function(){
+       init();
+    });
+
+    //商品全选/反选
+    $('#checkAll').live('change',function (e) {
+        e.preventDefault();
+
+        if ($('#checkAll').is(":checked")){
+            $('input[name=subBox]').prop('checked',true);
+            init();
+        } else {
+            $('input[name=subBox]').prop('checked',false);
+            init();
+        }
+    });
+
+    //合计商品[type="number"]里的所有数量
+    function quantity(){
+        var m = 0;
+        $('.weui-media-box').each(function(){
+            m += parseInt( $(this).find("input[type='number']").val() );
+        });
+    }
+
+    // 计算商品价格
+    $('.count').each(function(){
+        var count = $(this).find('input'),
+            prep = count.eq( 0),
+            add = count.eq( 2),
+            num = count.eq( 1 );
+
+        function total( i,n ){
+            var price = i.closest('.weui-media-box').find('.price'),
+                oPrice = price.attr('price');
+            price.html( parseInt( n ) * oPrice  );
+            init();
+            if( num.val() == 0 ){
+                num.closest('.weui-media-box').find('span').eq(1).html(0);
+            }else if( num.val() >= 0 ){
+                num.closest('.weui-media-box').find('span').eq(1).html(20);
+            }
+        }
+
+        add.on('click',function(){
+            num.val( parseInt ( num.val() ) + 1 );
+            prep.css('color','#000');
+            total( $(this),num.val() );
+            init();
+        });
+        prep.on('click',function(){
+            num.val( parseInt ( num.val() ) - 1 );
+            //num.val() == 0 ? num.val( 1 ):add;
+            if( num.val() == 0 ){
+                num.val( 1 );
+            }
+            total( $(this),num.val() );
+            init();
+        });
+
+        num.bind('input propertychange', function() {
+            if( !num.val() || num.val() == 0 ){
+                num.val( 1 );
+                total( $(this),num.val() );
+                init();
+            }else{
+                total( $(this),num.val() );
+                init();
+            }
+        });
+    });
+
+    //删除商品 从新计算价格
+    $('.del').click(function(){
+        $(this).closest('.weui-media-box').remove();
+        money.find('span').eq( 0).html( $('.weui-media-box').length );
+        init();
+    });
+
+    //提交表单后
+    $('form').submit(function(e){
+        alert("Submitted");
+    });
+
+</script>
+</body>
+
+</html>

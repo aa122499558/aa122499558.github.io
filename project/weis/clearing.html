@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>结算</title>
+    <!-- css S -->
+    <link href="http://cdn.bootcss.com/weui/1.1.0/style/weui.min.css" rel="stylesheet">
+    <link href="assets/css/lrtStyle.css" rel="stylesheet"/>
+    <!-- css E -->
+</head>
+<body style="height:1000px;">
+<div class="sub-head">
+    提交订单
+</div>
+
+<div class="clearing">
+    <form action="">
+
+        <!-- 收货人 -->
+        <div class="weui-cells weui-cells_form">
+            <div class="weui-cell weui-cell_warn">
+                <div class="weui-cell__hd"><label for="" class="weui-label">收货人</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" placeholder="请输入收货人姓名" name="name"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 手机号码 -->
+        <div class="weui-cells weui-cells_form">
+            <div class="weui-cell weui-cell_warn">
+                <div class="weui-cell__hd"><label for="" class="weui-label">手机号码</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" pattern="[0-9]*" placeholder="请输入号码" name="phone" required="required"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 收货地址 -->
+        <div class="weui-cells weui-cells_form">
+            <div class="weui-cell weui-cell_warn">
+                <div class="weui-cell__hd"><label for="" class="weui-label">收货地址</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" placeholder="请输入收货人详细地址" name="name"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 商品 -->
+        <div class="weui-panel__bd">
+            <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="assets/images/greens/1.jpg" alt="">
+                </div>
+                <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">奶油白菜<span>*1</span></h4>
+                    <p class="weui-media-box__desc">￥28/kg</p>
+                </div>
+            </a>
+            <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="assets/images/greens/2.jpg" alt="">
+                </div>
+                <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">上海青<span>*3</span></h4>
+                    <p class="weui-media-box__desc">￥39/kg</p>
+                </div>
+            </a>
+            <div class="total">合计：<span>￥280.00</span></div>
+        </div>
+
+        <!-- 提交 -->
+        <div class="weui-btn-area">
+            <input type="submit" class="weui-btn weui-btn_primary" id="showTooltips" value="提交订单">
+        </div>
+
+    </form>
+</div>
+
+<!-- class[weui-tabbar__icon]为选中状态 -->
+<div class="placeholder"></div>
+<div class="weui-tab floor">
+    <div class="weui-tabbar">
+        <a href="./index.html" class="weui-tabbar__item">
+            <span style="display: inline-block;position: relative;">
+                <i class="icon iconfont icon-home weui-tabbar__icon"></i>
+            </span>
+            <p class="weui-tabbar__label">主页</p>
+        </a>
+        <a href="./classify-1.html" class="weui-tabbar__item">
+            <i class="icon iconfont icon-class weui-tabbar__icon"></i>
+            <p class="weui-tabbar__label">分类</p>
+        </a>
+        <a href="./shop-car.html" class="weui-tabbar__item add-car">
+            <span style="display: inline-block;position: relative;">
+               <i class="icon iconfont icon-shopping weui-tabbar__icon"></i>
+                <span class="weui-badge weui-badge_dot cycl" style="position: absolute;top: 0;right: -6px;"></span>
+            </span>
+            <p class="weui-tabbar__label">购物车</p>
+        </a>
+        <a href="./user.html" class="weui-tabbar__item">
+          <span style="display: inline-block;position: relative;">
+              <i class="icon iconfont icon-user weui-tabbar__icon"></i>
+              <p class="weui-tabbar__label">我</p>
+                <span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>
+          </span>
+        </a>
+    </div>
+</div>
+
+<script src="http://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+</body>
+
+</html>
