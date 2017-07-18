@@ -12,6 +12,7 @@
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
 <link href="https://cdn.bootcss.com/fullPage.js/2.8.1/jquery.fullPage.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 <!--//style-->
 <!--js-->
 <script src="js/jquery-1.11.1.min.js"></script>
@@ -32,8 +33,25 @@
 		$('#dowebok').fullpage({
 			sectionsColor: ['', '', '', ''],
 			anchors: ['page1', 'page2', 'page3', 'page4'],
-			menu: '#menu'
+			menu: '#menu',
+			afterLoad:function(anchorLink, index){
+				
+				if( index == 2){
+					setTimeout(function(){
+						$('.new').addClass('swing');
+					},1000)
+				}
+
+			}
+
+			
 		});
+		$('.portfolio-grids').hover(function(){
+			$(this).find('.new').addClass('zoomOut').removeClass('zoomIn');
+		},function(){
+			$(this).find('.new').addClass('zoomIn').removeClass('zoomOut');
+		})
+		
 	});
 </script>
 <!--//fullpage-->
@@ -48,16 +66,20 @@
 	<div class="section">
 		<div id="skills" class="skills">
 			<div class="container">
+				
+				
+					<a class="s-xguide-downtrans" href="#page2" onclick="return false;" hidefocus=""></a>
+					<a class="s-xguide-down	arrow-1 trans" href="#page2" onclick="returnfalse;" hidefocus=""></a>
+				
+
 				<h3 class="title">个人简介</h3>
 				<div class="skills-info">
 					<p style="color:#fff; padding:0 50px 40px 50px; text-indent: 2em;">
-						我叫刘润堂,1996年,2014年底开始自学接触IT,目前成人大专在读,预计今年7月份毕业
-						熟练HTML5、CSS3、JavaScript等Web前端开发技术，能手写符合W3C标准、能编写语意化的XHTML文档并兼容多种浏览器的前端页面代码；
-						熟悉angular,vue,bootstrap,jquery等流行框架,
-						熟悉移动端主流浏览器的适配；
-						PhotoShop进行网页切图；
-						熟悉json等Web相关技术，会用原生的Javascript或JQuery完成页面展示与交互效果；
-						熟悉ajax，可以使用ajax与后台交互。
+						熟练HTML5、CSS3、JavaScript等Web前端开发技术，熟悉浏览器兼容，可解决常见兼容问题；
+						熟悉angular,vue,bootstrap,jquery等流行框架, 熟悉移动端页面适配；
+						熟练使用photoshop切图并高保真还原页面。
+						熟悉json等Web相关技术，会用原生的Javascript或JQuery完成页面展示与交互效果； 熟悉ajax，可以使用ajax与后台交互。
+						在公司期间单独负责前端部分，并且有较多的网站制作经验，希望能加入可以长期发展的公司,更多关于我的项目请<a style="font-size:16px;" href="#page2">点我</a>
 					</p>
 					<div class="col-md-6 bar-grids">
 						<h6>html&css  <span> 80% </span></h6>
@@ -65,12 +87,17 @@
 							<div class="progress-bar progress-bar-striped active" style="width: 80%">
 							</div>
 						</div>
-						<h6>jquery<span> 70% </span></h6>
+						<h6>jquery<span> 80% </span></h6>
 						<div class="progress">
-							<div class="progress-bar progress-bar-striped active" style="width: 70%">
+							<div class="progress-bar progress-bar-striped active" style="width: 80%">
 							</div>
 						</div>
-						<h6>bootstrap<span> 50% </span></h6>
+						<h6>bootstrap<span> 90% </span></h6>
+						<div class="progress">
+							<div class="progress-bar progress-bar-striped active" style="width: 90%">
+							</div>
+						</div>
+						<h6>ES6<span> 50% </span></h6>
 						<div class="progress">
 							<div class="progress-bar progress-bar-striped active" style="width: 50%">
 							</div>
@@ -94,6 +121,7 @@
 							<div class="progress-bar progress-bar-striped active" style="width: 65%">
 							</div>
 						</div>
+						
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -111,32 +139,37 @@
 
 						<div class="clearfix"> </div>
 						<ul class="resp-tabs-list wow fadeInUp animated" data-wow-delay=".7s" style="margin-bottom:0;">
-							<li class="resp-tab-item"><span>all</span></li>
-							<li class="resp-tab-item"><span>demo</span></li>
-							<li class="resp-tab-item"><span>project</span></li>
+							<li class="resp-tab-item"><span>全部</span></li>
+							<li class="resp-tab-item"><span>练习项目</span></li>
+							<li class="resp-tab-item"><span>工作项目</span></li>
 						</ul>
+						<div class="tips"></div>
 						<div class="resp-tabs-container">
 
 							<div class="tab-1 resp-tab-content" style="position:relative;">
+								
 								<div class="tab_img">
-									<div class="col-md-3 portfolio-grids">
-									<div class="grid">
-										<a href="http://www.epingmi.com/" class="swipebox" target="_blank">
-											<img src="images/ypm-pc.png" alt="" class="img-responsive" />
-											<div class="figcaption">
-												<h3>project<span>亿平米官网</span></h3>
-												<p>主要框架bootstrap,适应至各设备</p>
-											</div>
-										</a>
+
+									<div style="position:relative;" class="col-md-3 portfolio-grids">
+										<!--<div class="new animated">new</div>-->
+										<div class="grid">	
+											
+											<a href="http://www.epingmi.com/" class="swipebox" target="_blank">
+												<img src="images/ypm-pc.png" alt="" class="img-responsive" />
+												<div class="figcaption">
+													<h3>工作项目<span>亿平米官网</span></h3>
+													<p>亿平米官网线上代码,主要框架bootstrap,适应各种设备(动态)</p>
+												</div>
+											</a>
+										</div>
 									</div>
-								</div>
 									<div class="col-md-3 portfolio-grids">
 										<div class="grid">
 											<a href="project/weis" class="swipebox" target="_blank">
 												<img src="images/ypm-phone.png" alt="" class="img-responsive" />
 												<div class="figcaption">
-													<h3>project<span>亿平米微商城</span></h3>
-													<p>线下代码,项目暂未上线</p>
+													<h3>工作项目<span>亿平米微商城</span></h3>
+													<p>亿平米微信商城线下代码,项目暂未上线(静态)</p>
 												</div>
 											</a>
 										</div>
@@ -146,8 +179,34 @@
 											<a href="project/bilibili" class="swipebox" target="_blank">
 												<img src="images/g1.jpg" alt="" class="img-responsive" />
 												<div class="figcaption">
-													<h3>demo<span> bilibili&angular</span></h3>
-													<p>angular-单页面应用,最低兼容至IE10</p>
+													<h3>练习项目<span> bilibili&angular</span></h3>
+													<p>框架angular,只完成了首页/动画/音乐/番剧的主页,主要练习单页面切换以及组件应用(静态)</p>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div style="position:relative;" class="col-md-3 portfolio-grids">
+										<!--<div class="new animated">new</div>-->
+										<div class="grid">	
+											
+											<a href="http://ftp-cun-design.y66.dnsnd.com/" class="swipebox" target="_blank">
+												<img src="images/taochi.png" alt="" class="img-responsive" />
+												<div class="figcaption">
+													<h3>工作项目<span>淘驰科技</span></h3>
+													<p></p>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div style="position:relative;" class="col-md-3 portfolio-grids">
+										<!--<div class="new animated">new</div>-->
+										<div class="grid">	
+											
+											<a href="http://www.gardensquare.com.cn/zh/home.html" class="swipebox" target="_blank">
+												<img src="images/jiadi.png" alt="" class="img-responsive" />
+												<div class="figcaption">
+													<h3>工作项目<span>嘉地中心</span></h3>
+													<p></p>
 												</div>
 											</a>
 										</div>
@@ -157,8 +216,8 @@
 											<a href="project/lizhidai" target="_blank" class="swipebox">
 												<img src="images/g2.jpg" alt="" class="img-responsive" />
 												<div class="figcaption">
-													<h3>project<span>利至贷PC官网</span></h3>
-													<p>p2p网站-已下线</p>
+													<h3>工作项目<span>利至贷PC官网</span></h3>
+													<p>p2p网站-已下线(静态)</p>
 												</div>
 											</a>
 										</div>
@@ -168,8 +227,8 @@
 											<a href="project/chuangye" target="_blank" class="swipebox">
 												<img src="images/g3.jpg" alt="" class="img-responsive" />
 												<div class="figcaption">
-													<h3>project<span>创业榜</span></h3>
-													<p></p>
+													<h3>工作项目<span>创业榜</span></h3>
+													<p>静态页面未上线(静态)</p>
 												</div>
 											</a>
 										</div>
@@ -179,7 +238,7 @@
 											<a href="http://xcf.xiaoniu66.com/" target="_blank" class="swipebox">
 												<img src="images/g4.png" alt="" class="img-responsive" />
 												<div class="figcaption">
-													<h3>project<span>小牛新财富移动端-参与</span></h3>
+													<h3>工作项目<span>小牛新财富移动端-参与</span></h3>
 													<p></p>
 												</div>
 											</a>
@@ -190,8 +249,8 @@
 											<a href="project/YX" target="_blank" class="swipebox">
 												<img src="images/g5.jpg" alt="" class="img-responsive" />
 												<div class="figcaption">
-													<h3>demo<span> 易迅(仅主页)</span></h3>
-													<p>早期demo,最低兼容至IE7</p>
+													<h3>练习<span> 易迅(仅主页)</span></h3>
+													<p>较早的IE的兼容练习(静态)</p>
 												</div>
 											</a>
 										</div>
@@ -201,8 +260,8 @@
 											<a href="project/JD" target="_blank" class="swipebox">
 												<img src="images/g6.jpg" alt="" class="img-responsive" />
 												<div class="figcaption">
-													<h3>demo<span> 京东(仅主页)</span></h3>
-													<p>早期demo,最低兼容至IE7</p>
+													<h3>练习<span> 京东(仅主页)</span></h3>
+													<p>较早的IE的兼容练习(静态)</p>
 												</div>
 											</a>
 										</div>
@@ -212,8 +271,8 @@
 											<a href="project/houtai/daikuanshenqing.html" target="_blank" class="swipebox">
 												<img src="images/g7.jpg" alt="" class="img-responsive" />
 												<div class="figcaption">
-													<h3>PROJECT<span> 后台管理</span></h3>
-													<p></p>
+													<h3>工作项目<span> 后台管理</span></h3>
+													<p>后台管理(静态)</p>
 												</div>
 											</a>
 										</div>
@@ -229,7 +288,7 @@
 												<img src="images/g1.jpg" alt="" class="img-responsive" />
 												<div class="figcaption">
 													<h3><span> bilibili&angular</span></h3>
-													<p>angular-单页面应用,最低兼容至IE10</p>
+													<p>框架angular,只完成了首页/动画/音乐/番剧的主页,主要练习单页面切换以及组件应用(静态)</p>
 												</div>
 											</a>
 										</div>
@@ -240,7 +299,7 @@
 												<img src="images/g5.jpg" alt="" class="img-responsive" />
 												<div class="figcaption">
 													<h3><span> 易迅(仅主页)</span></h3>
-													<p>最低兼容至IE7</p>
+													<p>较早的IE的兼容练习(静态,最低至IE7)</p>
 												</div>
 											</a>
 										</div>
@@ -251,7 +310,7 @@
 												<img src="images/g6.jpg" alt="" class="img-responsive" />
 												<div class="figcaption">
 													<h3><span> 京东(仅主页)</span></h3>
-													<p>最低兼容至IE7</p>
+													<p>较早的IE的兼容练习(静态,最低至IE7)</p>
 												</div>
 											</a>
 										</div>
@@ -269,7 +328,7 @@
 												<img src="images/ypm-pc.png" alt="" class="img-responsive" />
 												<div class="figcaption">
 													<h3>project<span>亿平米官网</span></h3>
-													<p>主要框架bootstrap,适应至各设备</p>
+													<p>亿平米官网线上代码,主要框架bootstrap,适应各种设备(动态)</p>
 												</div>
 											</a>
 										</div>
@@ -280,7 +339,7 @@
 												<img src="images/ypm-phone.png" alt="" class="img-responsive" />
 												<div class="figcaption">
 													<h3>project<span>亿平米微商城</span></h3>
-													<p>线下代码,项目暂未上线</p>
+													<p>亿平米微信商城线下代码,项目暂未上线(静态)</p>
 												</div>
 											</a>
 										</div>
@@ -296,13 +355,39 @@
 											</a>
 										</div>
 									</div>
+									<div style="position:relative;" class="col-md-4 portfolio-grids">
+										<!--<div class="new animated">new</div>-->
+										<div class="grid">	
+											
+											<a href="http://ftp-cun-design.y66.dnsnd.com/" class="swipebox" target="_blank">
+												<img src="images/taochi.png" alt="" class="img-responsive" />
+												<div class="figcaption">
+													<h3>工作项目<span>淘驰科技</span></h3>
+													<p></p>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div style="position:relative;" class="col-md-4 portfolio-grids">
+										<!--<div class="new animated">new</div>-->
+										<div class="grid">	
+											
+											<a href="http://www.gardensquare.com.cn/zh/home.html" class="swipebox" target="_blank">
+												<img src="images/jiadi.png" alt="" class="img-responsive" />
+												<div class="figcaption">
+													<h3>工作项目<span>嘉地中心</span></h3>
+													<p></p>
+												</div>
+											</a>
+										</div>
+									</div>
 									<div class="col-md-4 portfolio-grids">
 										<div class="grid">
 											<a href="project/chuangye" target="_blank" class="swipebox">
 												<img src="images/g3.jpg" alt="" class="img-responsive" />
 												<div class="figcaption">
 													<h3><span><br/>创业榜</span></h3>
-													<p></p>
+													<p>静态页面未上线(静态)</p>
 												</div>
 											</a>
 										</div>
@@ -324,7 +409,7 @@
 												<img src="images/g7.jpg" alt="" class="img-responsive" />
 												<div class="figcaption">
 													<h3><span> 后台管理</span></h3>
-													<p></p>
+													<p>后台管理(静态)</p>
 												</div>
 											</a>
 										</div>
