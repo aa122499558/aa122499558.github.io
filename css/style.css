@@ -1,7 +1,6 @@
 body{
 	margin:0;
 	font-family: 'Roboto Condensed', sans-serif;
-	background: url(../images/white.jpg) center;
 }
 body a{
 	transition: 0.5s all;
