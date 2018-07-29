@@ -1,7 +1,7 @@
 body{
 	margin:0;
 	font-family: 'Roboto Condensed', sans-serif;
-	background:red;
+	background:#000;
 }
 body a{
 	transition: 0.5s all;
