@@ -1,0 +1,30 @@
+1【所有页面底下的JS都添加上了以下代码】
+        function winRoll(){
+            if($(window).scrollTop()>83){
+                $('.navBox').addClass('roll');
+            }else{
+                $('.navBox').removeClass('roll');
+            }
+        }
+        winRoll();
+        $(window).scroll(function(){
+            winRoll();
+        });
+
+
+2 【form-1.html与form-2.html里面所有的input都更新了限制字数长度】
+
+2 【form-1.html与form-2.html底部的验证表单js都做了修改】
+
+4 【首页上的第二个精选楼房列表 标题改动，首页搜索栏上的 all hong kong lsland kowloon newterrioris 首字母改成了大写】
+
+5 【所有页面jquery版本更换，改为<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script> 】
+
+5 【关于我们，锚点a标签链接改成了禁止跳转，关于我们-我们的客户（整体结构做了修改），关于我们底部js新增了一段代码，改用js控制锚点】
+
+6 【商铺列表搜索栏选项卡按钮的文字修改】
+
+7 【写字楼列表和商铺列表筛选栏两处改为滑块，并且头部引入了插件，底部插入了js】
+
+8 【写字楼列表和商铺列表筛选栏自定义按钮做了修改，并且在底部JS加了一段点击事件】
+

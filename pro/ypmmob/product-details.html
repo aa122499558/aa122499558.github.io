@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>商品详情</title>
+    <!-- css S -->
+    <link href="http://cdn.bootcss.com/weui/1.1.0/style/weui.min.css" rel="stylesheet">
+    <link href="assets/css/lrtStyle.css" rel="stylesheet"/>
+    <!-- css E -->
+</head>
+<body>
+<div class="buy-details">
+
+    <!-- 头部 -->
+    <div class="sub-head weui-cell_access" style="position:fixed;">
+        <a class="retreat iconfont icon-retreat" href="javascript:history.go(-1);"></a>
+        <!-- 产品名 -->
+        YPM-M005
+        <a class="more iconfont icon-more" href="javascript:void(0);"></a>
+    </div>
+    <div style="height:41px;"></div>
+
+    <!-- 子导航[上面弹出] -->
+    <ul class="sub-nav">
+        <li><a href="./index.html">主页</a></li>
+        <li><a href="./machine.html">分类</a></li>
+        <li><a href="./shop-car.html">购物车</a></li>
+        <li><a href="./user.html">我</a></li>
+    </ul>
+
+   <!-- 选项卡按钮 -->
+    <ul class="tab-btn">
+        <li class="active">基本信息</li>
+        <li>产品详情</li>
+    </ul>
+
+    <!-- 选项卡内容-->
+    <div class="tab-content">
+        <!-- 选项卡[1] -->
+        <div class="active product-pic" style="width:100%;">
+            <div class="carousel">
+                <ul>
+                    <li><img src="assets/images/m/3.jpg"/></li>
+                    <li><img src="assets/images/m/4.jpg"/></li>
+                </ul>
+                <ol>
+                    <li class="active"></li>
+                    <li></li>
+                </ol>
+            </div>
+            <div>
+
+            </div>
+            <div class="buy-info">
+                <h5>MINI型YPM-M005[标准版]</h5>
+                <div class="price">
+                    <p>将现代水培技术与智能家居相结合，打造的一款适合家庭以及公共环境使用的智能产品。运用航天受控生态生命保障系统的核心技术</p>
+                    <div>全国统一售价：<strong>￥</strong><span>998</span></div>
+                </div>
+                <div>
+                    <form action="">
+                        <!-- 地址 -->
+                        <div class="form-section area">
+                            <label>送至：</label>
+                            <select id="province" runat="server" name="province">
+                            </select>
+                            <select id="city" runat="server" name="city">
+                            </select>
+                            <select id="county" runat="server" name="city">
+                            </select>
+                        </div>
+
+                        <!-- 数量 -->
+                        <div class="form-section quantity">
+                            <label>数量：</label>
+                            <div class="count">
+                                <input type="button" value="-"/>
+                                <input class="count-number" type="number" name="quantity" value="1" pattern="[0-9]*"/>
+                                <input type="button" value="+"/>
+                            </div>
+                        </div>
+
+                        <!-- 占位符 -->
+                        <div style="height:100px;"></div>
+
+                    </form>
+                </div>
+                <div class="js_dialog" id="iosDialog2">
+
+                    <div class="weui-dialog">
+                        <div class="weui-dialog__bd">成功加入购物车</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 选项卡[2] -->
+        <div class="product-info">
+            <img class="adapt-img" src="assets/images/p2.jpg"/>
+            <img class="adapt-img" src="assets/images/p1.jpg"/>
+            <img class="adapt-img" src="assets/images/p2.jpg"/>
+
+            <div style="height:53px;"></div>
+        </div>
+    </div>
+
+    <!-- 购买导航 -->
+    <ul class="buy-menu">
+        <li class="icon" style="position:relative;"><a href="./shop-car.html"><span class="weui-badge weui-badge_dot cycl" style="position: absolute;top: 2px;right: 22px;"></span><i class="iconfont icon-shopping"></i><p>购物车</p></a></li>
+        <li class="btn btn-add push-car"><a href="javascript:void(0);">加入购物车</a></li>
+        <li class="btn btn-buy"><a href="./clearing.html">立即购买</a></li>
+    </ul>
+
+</div>
+
+<script src="http://cdn.bootcss.com/zepto/1.2.0/zepto.min.js" type="text/javascript"></script>
+<script src="assets/js/area.js" type="text/javascript"></script>
+<script src="assets/js/mggScrollImg.js" type="text/javascript"></script>
+<script>
+    $(function(){
+
+        //选项卡切换
+        var tabBtn = $('.tab-btn>li');
+        var tabCon = $('.tab-content>div');
+        var n = null;
+        tabBtn.on('click',function(){
+            n = $(this).index();
+            $(this).addClass('active').siblings().removeClass('active');
+            tabCon.eq( n ).addClass('active').siblings().removeClass('active');
+        });
+
+        //子导航弹出动画
+        var nf = true ;
+        function animateIn(){
+            $('.sub-nav').addClass('animate').show().removeClass('out');
+            nf = false;
+        }
+        function animateOut(){
+            $('.sub-nav').removeClass('animate').addClass('out');
+            nf = true;
+        }
+        $('.icon-more').click(function(){
+            nf?animateIn():animateOut();
+        });
+
+        $( document ).click(function(){
+            animateOut();
+        });
+
+        $(".sub-head").click(function(event){
+            event.stopPropagation();
+        });
+
+        //地区数据
+        setup();
+
+        //增加&减少商品数量
+        var count = $('.count'),
+        prep = count.find('input').eq( 0),
+        add = count.find('input').eq( 2),
+        num = count.find('input').eq( 1 );
+
+        add.on('click',function(){
+            num.val( parseInt ( num.val() ) + 1 );
+        });
+        prep.on('click',function(){
+            parseInt ( num.val() )?num.val( parseInt ( num.val() ) - 1 ):add ;
+        });
+
+        ///立即购买-提交表单
+        $(".btn-buy").click(function(){
+            $("form").submit();
+        });
+
+        //轮播
+        $('.carousel ul li').width( $(window).width() );
+        var scrollImg = $.mggScrollImg('.carousel ul',{
+            loop : false,//循环切换
+            auto : false,//自动切换
+            callback : function(ind){//这里传过来的是索引值
+                $('.carousel ol li').eq(ind).addClass('active').siblings().removeClass('active');
+            }
+        });
+
+        // 加入购物车 ajax check
+        $('.push-car').click(function(){
+            $('.buy-details').addClass('animate');
+            $('.js_dialog').addClass('fadeIn');
+            setTimeout(function(){
+                $('.js_dialog').removeClass('fadeIn');
+            },1000);
+        });
+
+    });
+</script>
+
+</body>
+
+</html>

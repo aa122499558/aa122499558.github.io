@@ -1,0 +1,28 @@
+        
+
+	【底部的JS部分 计算机 弹窗部分，从新覆盖下，先前的没做兼容firefox处理】
+
+
+	// 计算机右下角弹窗
+        $('.computer-btn').click(function(e){
+            e = e||event;
+            e.preventDefault();
+            e.stopPropagation();
+            $(this).find('.computer').css('display') == "none"? $(this).find('.computer').show() : $(this).find('.computer').hide();
+            $(this).find('.box').css('display') == "none"? $(this).find('.box').show() : $(this).find('.box').hide();
+            if( $(window).width() < 768 ){
+                $('.computer-mask').show().css('left',0)
+            }
+
+        })
+        $('.computer-btn .box').click(function(e){
+            e = e||event;
+            e.preventDefault();
+            e.stopPropagation();
+        })
+        $('.close').click(function(even)
+        {   
+            $('.computer').hide();
+            $('.computer-btn .box').hide();
+        })
+        $('.computer-mask').height( $(document).height() );
