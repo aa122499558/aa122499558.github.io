@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="wbox signReg">
+        <h1>登录帐号</h1>
+        <div class="srWrap">
+            <div class="srInp">
+                <span>手机号</span>
+                <input class="phone" type="text" placeholder="请输入帐号">
+            </div>
+            <div class="srInp">
+                <span>密码</span>
+                <input class="pas" type="password" placeholder="请输入密码">
+            </div>
+            <div class="retrieve"><a href="#">忘记密码?</a></div>
+            <input class="signBtn" type="submit" value="登录">
+        </div>
+    </div>
+</body>
+<script>
+    $(function(){
+        var phone = $(".phone");
+        var pas = $(".pas");
+        var phoneReg = /^[1][3,4,5,7,8][0-9]{9}$/;//手机号
+        $(".signBtn").click(function(){
+            if( phone.val() == "" ){
+                alert("请输入帐号")
+            }else if( pas.val() == "" ){
+                alert("请输入密码")
+            }else if( !phoneReg.test(phone.val() ) ){
+                alert( "请输入正确的手机号码" )
+            }else{
+                //通过
+                // ajax({
+                //     url: myUrl,
+                //     type: 'get',
+                //     dataType: 'json',
+                //     success: function (data, status) {
+                //         console.log(data)
+                //     }
+                // })  
+            }
+        })
+    })
+</script>
+</html>

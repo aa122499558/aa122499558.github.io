@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="wbox signReg">
+        <h1>注册帐号</h1>
+        <div class="srWrap">
+            <div class="srInp">
+                <span>手机号</span>
+                <input class="phone" type="text" placeholder="请输入手机号">
+            </div>
+            <div class="srInp verification">
+                <span>验证码</span>
+                <input class="phoneCode" type="password" placeholder="请输入验证码">
+                <button class="code">获取</button>
+            </div>
+            <div class="srInp">
+                <span>密码</span>
+                <input class="pas" type="password" placeholder="请输入密码">
+            </div>
+            <div class="srInp">
+                <span>确认密码</span>
+                <input class="checkPas" type="password" placeholder="请再次输入密码">
+            </div>
+            <div class="retrieve">注册既同意<a href="javascript:void(0)">《用户使用协议》</a></div>
+            <input class="check" type="submit" value="注册">
+        </div>
+    </div>
+</body>
+<script>
+    $(function(){
+        var countdown = 59;//倒计时
+        var pas = $(".pas");//密码
+        var checkPas = $(".checkPas");//确认密码
+        var phone = $(".phone");//手机号码
+        var code = $(".phoneCode");//手机验证码
+        var pwdReg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$/;//密码，8到16位数字与字母组合
+        var phoneReg = /^[1][3,4,5,7,8][0-9]{9}$/;//手机号
+      
+        //提交
+        $(".check").click(function(){   
+            if( phone.val() == "" ){
+                alert("请输入手机号");
+            }else if( !phoneReg.test(phone.val() ) ){
+                alert("请输入11位有效的手机号");
+            }else if( code.val() == "" ){
+                alert("请输入手机验证码");
+            }else if( pas.val() =="" ){
+                alert("请输入密码");
+            }else if( checkPas.val() == ""){
+                alert("请再次输入密码");
+            }else if( pas.val() != checkPas.val() ){
+                alert("两次输入密码不一致");
+            }else if( !pwdReg.test( pas.val() ) ){
+                alert("请输入8-15位英文与数字组合的密码")
+            }else{
+                //通过
+                // ajax({
+                //     url: myUrl,
+                //     type: 'get',
+                //     dataType: 'json',
+                //     success: function (data, status) {
+                //         console.log(data)
+                //     }
+                // })  
+            }
+        })
+
+        //发送手机验证码
+        $(".code").click(function(){
+            if (phone.val() == "") {
+                alert("请输入手机号");
+                return false;
+            }
+            alert("已发送验证码到您的手机")
+            settime($(".code") );
+                //通过 发送验证码到手机
+                // ajax({
+                //     url: myUrl,
+                //     type: 'get',
+                //     dataType: 'json',
+                //     success: function (data, status) {
+                //         console.log(data)
+                //     }
+                // })  
+        })
+
+        //验证码请求倒计时
+        function settime(obj) { 
+            if (countdown == 0) { 
+                
+                obj.removeAttr("disabled");  
+                obj.html("获取");
+                obj.removeClass("active");
+                countdown = 60; 
+                return;
+            } else { 
+
+                obj.attr("disabled", true); 
+                obj.html(countdown);
+                obj.addClass("active");
+                countdown--; 
+            } 
+            setTimeout(function() { 
+                settime(obj) }
+            ,1000) 
+        }
+    })
+</script>
+</html>

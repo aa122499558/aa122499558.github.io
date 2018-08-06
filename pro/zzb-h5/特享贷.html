@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="header">至尊宝金融</div>
+
+
+
+    <div class="wbox">
+        <div class="dkbox">
+            <p>请输入您的申请金额（元）</p>
+            <div><img src="img/rmb.png" /><input type="text" /></div>
+            <a class="btn">一键申请</a>
+        </div>
+        <div class="radiolist">
+            <h3>请选择您的职业</h3>
+            <ul class="job">
+                <li class="cur" name="job">上班族</li>
+                <li name="sex">个体户</li>
+                <li name="as">企业主</li>
+                <li name="agfwag">自由职业</li>
+                <li name="jofawb">上市公司融资</li>
+                <li name="job">资金过桥</li>
+                <li name="job">车贷</li>
+                <li name="job">房贷</li>
+            </ul>
+        </div>
+        <div class="partner">
+            <h3>合作单位</h3>
+            <div class="ulist">
+                <ul>
+                    <li><img src="https://ss0.bdstatic.com/-0U0bnSm1A5BphGlnYG/tam-ogel/7bee21f41bd87aea35af25f084488a35_121_121.jpg" />中国工商银行</li>
+                    <li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1530387321097&di=7fc8f8160086f335545f5014499f6262&imgtype=0&src=http%3A%2F%2Fhebei.sinaimg.cn%2F2015%2F0415%2FU10142P1275DT20150415172217.png" />光大银行</li>
+                    <li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1530387663224&di=9c8ad65697a5281fe3254849926a337a&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160918%2F7512204d3fee448e8a38a28de6aa5538_th.png" />建设银行</li>
+                    <li><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3477855584,512736669&fm=27&gp=0.jpg" />交通银行</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <ul>
+            <li class="li1">
+                <a href="首页.html">
+                    <i></i>
+                    <p>首页</p>
+                </a>
+            </li>
+            <li class="li2 cur">
+                <a href="特享贷.html">
+                    <i></i>
+                    <p>订单进度</p>
+                </a>
+            </li>
+            <li class="li3">
+                <a href="user.html">
+                    <i></i>
+                    <p>用户中心</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    $(function(){
+        var type = "";//当前选中职业类型的自定义属性
+        $(".job").find("li").click(function(){
+            $(this).addClass("cur").siblings().removeClass("cur");
+            type = $(this).attr("name")
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/global.css"/>
+<link rel="stylesheet" type="text/css" href="css/account-setting.css"/>
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="header">
+    <div class="inner">
+        <ul class="service">
+            <li class="hotline"><i class="icons"></i><b>客服热线</b><em>400 890 3980</em></li>
+            <li class="concerns"><b>关注我们</b><a href="javascript:;" target="_blank" class="icons weixin"></a></li>
+        </ul>
+        <div class="loginbar">
+                     <div class="fl"><a href="" style="color:#fc8936" rel="nofollow">免费注册</a><a href="" style="color:#349cd8">立即登录</a></div>
+        </div>
+        <div class="logo">
+            <h2><a href="/"><img alt="网" src="images/logo.png" width="350" height="51"></a></h2>
+            <h1>口号</h1>
+        </div>
+    </div>
+    <div class="topbar"></div>
+</div>
+<div id="wrapper">
+	<div class="reg-title">
+        <h2>账户注册</h2>
+        <b class="line"></b>
+    </div>
+    <div class="reg-steps">
+    	<ol class="reg-step-1">
+            <li class="step-1"><span class="txt"><i class="icons dot24">1</i>填写账户信息</span></li>
+            <li class="step-2"><span class="txt"><i class="icons dot24">2</i>验证账户信息</span></li>
+            <li class="step-3"><span class="txt"><i class="icons dot24">3</i>注册成功</span></li>
+        </ol>
+    </div>
+    <div class="reg-items">
+    	<img class="reg-right" src="images/reg.jpg" />
+        <ul class="items">
+            <li class="txt"><em>*</em>用户名</li>
+            <li>
+                <input type="text" id="signName" name="signName" onblur="chekUsNamefor()" class="input" maxlength="18" autocomplete="off" style="color: rgb(153, 153, 153);">
+                <span class="tip" id="signNameTip"></span> 
+            </li>
+        </ul>
+        <ul class="items">
+            <li class="txt"><em>*</em>密码</li>
+            <li>
+                <input type="password" id="signPwd" name="signPwd" onblur="chekPwdfor()" class="input" maxlength="16" autocomplete="off">
+                <span class="tip" id="signPwdTip"></span> 
+            </li>
+        </ul>
+        <ul class="items">
+            <li class="txt"><em>*</em>确认密码</li>
+            <li>
+                <input type="password" id="signPwdRepeat" name="signPwdRepeat" onblur="checkPWDui()" class="input" maxlength="16">
+                <span class="tip" id="signPwdRepeatTip"></span> 
+            </li>
+        </ul>
+        <ul class="items">
+            <li class="txt"><em>*</em>验证码</li>
+            <li>
+                <input type="text" id="authCode" name="authCode" onblur="chekVerifyCode()" class="input" style="width:70px">
+                <img src="" id="imgverCode" onclick="coderefresh()" width="104" height="42" alt="验证码" title="验证码" class="verifycode"> 
+                <a href="javascript:;" onclick="" class="refreshcode r3"><i class="icons refresh-todo"></i><b>刷新</b></a>
+                <span class="tip" id="signAuthCodeTip"></span> </li>
+        </ul>
+        <div class="agreement">
+            <input type="checkbox" id="protocol" checked="checked">
+            <label>我同意《<a href="/static/laws/zcxy.jsp" target="_blank">利至贷注册协议</a>》及《<a href="/static/laws/tzzx.jsp" target="_blank">利至贷投资咨询与管理服务协议</a>》 </label>
+            <span id="protocolTip"></span> </div>
+        <div class="next-step"> <a href="" class="gbtn" id="signSubmit">下一步</a> 
+        </div>
+        <div class="security-pro"><i class="icons ver-green-down"></i><b>您的信息通过256位SGC加密保护，数据传输安全</b></div>
+    </div>
+</div>
+<div id="footer" style="height:140px;">
+    <div class="inner footer2">
+        <div class="fool">
+            <ul class="navsub">
+                <li><a href="">关于我们</a></li>
+                <li><a href="">帮助中心</a></li>
+                <li><a href="">新闻中心</a></li>
+                <li><a href="">保障说明</a></li>
+                <li><a href="">联系我们</a></li>
+                <li><a href="">友情链接</a></li>
+            </ul>
+            <div class="cabout">
+                <h2>关注我们</h2>
+                <ul>
+                    <li><a href="" target="_blank" class="weibo hovereffect" rel="nofollow"><i class="icons">官方新浪微博</i></a></li>
+                    <li><a href="javascript:;" class="weixin hovereffect" rel="nofollow"><i class="icons">官方微信</i></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="foor">
+        	<div class="hotl">
+                <p>客服热线：<em>400 890 3980</em></p>
+            </div>
+            <div class="letter foot-letter">
+            	<a title="网信认证" href="" target="_blank" class="icons yx" rel="nofollow"></a>
+                <a title="VeriSign加密服务" href="" target="_blank" class="icons yn" rel="nofollow"></a>
+                <a title="可信网站" href="" target="_blank" class="icons yk" rel="nofollow"></a>
+                <a title="诚信网站" href="" target="_blank" class="icons yc" rel="nofollow"></a>
+                <a title="网上交易保障中心" href="" target="_blank" class="icons yb" rel="nofollow"></a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

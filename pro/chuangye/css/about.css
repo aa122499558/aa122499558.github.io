@@ -1,0 +1,22 @@
+
+.banner{ width:100%;height:204px; background:url(../img/banner.png) no-repeat center;}
+
+.about-list{ width:180px;height:400px;float:left;}
+.about-list li{  border:1px solid #ebebeb; margin-top:-1px; text-align: center;line-height:53px;}
+.about-list li a{ width:178px; height:53px;display: block;}
+.about-list li a:hover{ color:#003499;}
+.about-list .active{ background:#ebebeb;}
+.about-info{ width:884px;overflow:hidden;float:right;border:1px solid #ebebeb;padding:50px 50px 0 50px; box-shadow: 5px 0 5px 0 #ccc;}
+.about-info .info{ padding-bottom:30px;}
+.about-info .title{ height:30px; margin:0 auto;overflow: hidden; width:300px;padding-bottom:10px;}
+.about-info .title>*{ display:inline-block;}
+.about-info .title i{ width:90px; height:1px; background:#b7b7b7; position: relative; top:-5px; *display:none;}
+.about-info .title h3{ *margin-left:100px; color:#4c4c4c;}
+.about-info p{ text-indent: 2em;color:#666666;}
+
+.character{ padding-bottom:50px;}
+.team .character img{ float:left;margin:0 20px 8px 0;}
+.team .character p{ float:none; text-indent: 0;}
+.character h3,.character h4{ float:none; padding-bottom:8px;color:#666666;font-weight: normal;}
+
+#footer{ margin-top:40px;}

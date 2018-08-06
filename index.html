@@ -18,30 +18,33 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
     </head>
     <style>
-        *{ margin:0; padding:0; list-style: none; text-decoration: none;}
+        *{ margin:0; padding:0; list-style: none; text-decoration: none;font-family:"微软雅黑";}
         body{ background: url("img/white.jpg");}
         /* ul{ display: -webkit-flex;display: flex;} */
         ul li{ 
-            height:500px;
             margin-top:20px;
             padding:10px;
+            float:left;
         }
         ul li:nth-of-type(1){
-            height: 440px;
         }
-        ul li:nth-of-type(3){
-            height:350px;
+        ul li img{
+            width: 100%;
+            height: 100%;
+            margin:0 auto;
+            display: block;
         }
         ul li a{
             width: 80%;
             height: 100%;
             display: block;
             margin:0 auto;
-            background:url("img/xgfc.png") no-repeat;
+            font-size: 12px;
+            
             background-size:100%;
             position:relative;
         }
-        ul li:nth-of-type(2) a{
+        /* ul li:nth-of-type(2) a{
             width: 80%;
             height: 100%;
             display: block;
@@ -59,6 +62,15 @@
             background-size:100%;
             position:relative;
         }
+        ul li:nth-of-type(4) a{
+            width: 80%;
+            height: 100%;
+            display: block;
+            margin:0 auto;
+            background:url("img/cyb.png") no-repeat;
+            background-size:100%;
+            position:relative;
+        } */
         ul li .mask{
             background:rgba(0,0,0,0.6);
             width: 100%;
@@ -69,9 +81,56 @@
             bottom:0;
             position: absolute;
         }
-
+        @media (min-width: 768px){
+            ul li{ 
+                height: 400px;
+            }
+            ul li:nth-of-type(3) img{
+                width: 70%;
+            }
+            ul li:nth-of-type(3) .mask{
+                width: 70%;
+                left:calc( 50% - 35%)
+            }
+            ul li:nth-of-type(4) img{
+                width: 60%;
+            }
+            ul li:nth-of-type(4) .mask{
+                width: 60%;
+                left:calc( 50% - 30%)
+            }
+            ul li:nth-of-type(5) img{
+                width: 80%;
+            }
+            ul li:nth-of-type(5) .mask{
+                width: 80%;
+                left:calc( 50% - 40%)
+            }
+            ul li:nth-of-type(6) img{
+                width: 70%;
+            }
+            ul li:nth-of-type(6) .mask{
+                width: 70%;
+                left:calc( 50% - 35%)
+            }
+            ul li:nth-of-type(7) img{
+                width: 80%;
+            }
+            ul li:nth-of-type(7) .mask{
+                width: 80%;
+                left:calc( 50% - 40%)
+            }
+            ul li:nth-of-type(8) img{
+                width: 70%;
+            }
+            ul li:nth-of-type(8) .mask{
+                width: 70%;
+                left:calc( 50% - 35%)
+            }
+        }
         @media (max-width: 768px){
             .container{ padding:0;}
+            ul li{ width: 100%;}
             ul li a{ width: 100%;}
         }
 
@@ -81,17 +140,53 @@
             <ul>
                 <li class="col-md-4">
                     <a href="pro/buliding/index.html">
-                       <div class="mask">近期外包项目,响应式布局,支持手机,ipad以及PC,暂未上线</div>
+                        <img src="img/xgfc.png" alt="">
+                       <div class="mask">宏信-官网,近期外包项目,响应式布局,支持手机,ipad以及PC,暂未上线</div>
+                    </a>    
+                </li>
+
+                <li class="col-md-4">
+                    <a href="http://www.epingmi.com/">
+                        <img src="img/ypm1.png" alt="">
+                       <div class="mask">亿平米植物工厂-官网,公司在职项目,响应式布局</div>
                     </a>    
                 </li>
                 <li class="col-md-4">
                     <a href="pro/ypmmob/index.html">
-                        <div class="mask">微商城，公司在职项目,未上线</div>
+                        <img src="img/ypnmob.png" alt="">
+                       <div class="mask">亿平米植物工厂-微信商城,公司在职项目,移动端</div>
                     </a>    
                 </li>
                 <li class="col-md-4">
-                    <a href="http://www.epingmi.com/">
-                        <div class="mask">亿平米官网,响应式布局,公司在职项目</div>
+                    <a href="pro/zzb-h5/首页.html">
+                        <img src="img/zzb.png" alt="">
+                       <div class="mask">至尊宝官网,移动端,外包项目</div>
+                    </a>    
+                </li>
+
+
+                <li class="col-md-4">
+                    <a href="pro/chuangye/index.html">
+                        <img src="img/cyb.png" alt="">
+                       <div class="mask">创业榜,PC端,外包项目</div>
+                    </a>    
+                </li>
+                <li class="col-md-4">
+                    <a href="pro/kabaoMobile/index.html">
+                        <img src="img/kb.png" alt="">
+                       <div class="mask">卡宝修车,移动端,外包项目</div>
+                    </a>    
+                </li>
+                <li class="col-md-4">
+                    <a href="pro/lizhidai/index.html">
+                        <img src="img/lzd.png" alt="">
+                       <div class="mask">有利网,PC端,外包项目</div>
+                    </a>    
+                </li>
+                <li class="col-md-4">
+                    <a href="http://xcf.xiaoniu66.com/">
+                        <img src="img/xiaoniu.png" alt="">
+                       <div class="mask">小牛财富,外包项目,移动端</div>
                     </a>    
                 </li>
             </ul>
